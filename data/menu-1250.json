@@ -1,0 +1,160 @@
+{
+  "info": {
+    "title": "Меню на 1250 ккал",
+    "calories": 1250,
+    "protein": 80,
+    "fat": 48,
+    "carbs": 124,
+    "days": 28,
+    "source": "pdf/menu-1250.pdf"
+  },
+  "recipes": {
+    "омлет": {
+      "name": "Омлет из 1 яйца",
+      "portions": 1,
+      "calories": 70,
+      "protein": 6,
+      "fat": 5,
+      "carbs": 0.5,
+      "ingredients": [
+        { "name": "Яйцо", "amount": 1, "unit": "шт" },
+        { "name": "Молоко", "amount": 50, "unit": "мл", "optional": true }
+      ],
+      "instructions": "Взбить яйцо с молоком, обжарить на сковороде.",
+      "replacements": {
+        "молоко": "вода или без молока",
+        "яйцо": "яичный белок"
+      }
+    },
+    "цельнозерновой-хлеб-сыр": {
+      "name": "Цельнозерновой хлеб + сыр",
+      "portions": 1,
+      "calories": 200,
+      "protein": 10,
+      "fat": 8,
+      "carbs": 25,
+      "ingredients": [
+        { "name": "Цельнозерновой хлеб", "amount": 50, "unit": "г" },
+        { "name": "Сыр твёрдый 30-50%", "amount": 30, "unit": "г" }
+      ],
+      "instructions": "Хлеб с сыром.",
+      "replacements": {
+        "сыр": "творожный сыр",
+        "хлеб": "хлебцы"
+      }
+    },
+    "творог-сухофрукты": {
+      "name": "Творог с сухофруктами",
+      "portions": 1,
+      "calories": 233,
+      "protein": 20,
+      "fat": 5,
+      "carbs": 25,
+      "ingredients": [
+        { "name": "Творог 4-5%", "amount": 140, "unit": "г" },
+        { "name": "Сухофрукты", "amount": 25, "unit": "г" }
+      ],
+      "instructions": "Смешать творог с сухофруктами.",
+      "replacements": {
+        "творог": "творог безлактозный",
+        "сухофрукты": "мёд"
+      }
+    },
+    "каша": {
+      "name": "Крупа на выбор",
+      "portions": 1,
+      "calories": 200,
+      "protein": 7,
+      "fat": 2,
+      "carbs": 40,
+      "ingredients": [
+        { "name": "Крупа (греча/булгур/полба/геркулес/рис/киноа/перловка)", "amount": 65, "unit": "г" },
+        { "name": "Вода", "amount": 300, "unit": "мл" }
+      ],
+      "instructions": "Отварить крупу в воде.",
+      "replacements": {
+        "крупа": "макароны твёрдых сортов"
+      }
+    },
+    "курица-салат": {
+      "name": "Курица с салатом",
+      "portions": 1,
+      "calories": 250,
+      "protein": 30,
+      "fat": 10,
+      "carbs": 10,
+      "ingredients": [
+        { "name": "Курица без кожи", "amount": 100, "unit": "г" },
+        { "name": "Овощи для салата", "amount": 200, "unit": "г" },
+        { "name": "Масло растительное", "amount": 5, "unit": "мл" }
+      ],
+      "instructions": "Курицу приготовить (тушить/запечь/обжарить). Нарезать овощи, заправить маслом.",
+      "replacements": {
+        "курица": "индейка",
+        "масло": "оливковое масло"
+      }
+    },
+    "яблоко": {
+      "name": "Яблоко",
+      "portions": 1,
+      "calories": 50,
+      "protein": 0,
+      "fat": 0,
+      "carbs": 14,
+      "ingredients": [
+        { "name": "Яблоко", "amount": 120, "unit": "г" }
+      ],
+      "instructions": "Съесть яблоко.",
+      "replacements": {
+        "яблоко": "груша / апельсин / 2 киви / 100г ягод / банан"
+      }
+    },
+    "овощной-салат-авокадо": {
+      "name": "Овощной салат с авокадо",
+      "portions": 1,
+      "calories": 224,
+      "protein": 8,
+      "fat": 15,
+      "carbs": 15,
+      "ingredients": [
+        { "name": "Овощи (зелень/огурцы/помидоры/перец/капуста/редис/лук)", "amount": 200, "unit": "г" },
+        { "name": "Масло растительное", "amount": 10, "unit": "мл" },
+        { "name": "Моцарелла", "amount": 20, "unit": "г" },
+        { "name": "Авокадо", "amount": 40, "unit": "г", "optional": true }
+      ],
+      "instructions": "Нарезать овощи, добавить масло, моцареллу и авокадо.",
+      "replacements": {
+        "моцарелла": "фетакса / морепродукты",
+        "авокадо": "2 ч.л. масла"
+      }
+    },
+    "салат-зелень-масло": {
+      "name": "Овощной салат с зеленью",
+      "portions": 1,
+      "calories": 120,
+      "protein": 2,
+      "fat": 10,
+      "carbs": 8,
+      "ingredients": [
+        { "name": "Овощи и зелень", "amount": 200, "unit": "г" },
+        { "name": "Масло растительное", "amount": 10, "unit": "мл" }
+      ],
+      "instructions": "Нарезать овощи, заправить маслом."
+    }
+  },
+  "menu": {
+    "2025-02-03": {
+      "breakfast": [{ "id": "d1-zavtrak", "recipeId": "омлет", "portions": 1 }],
+      "lunch": [{ "id": "d1-perkus", "recipeId": "творог-сухофрукты", "portions": 1 }],
+      "dinner": [{ "id": "d1-obed", "recipeId": "каша", "portions": 1 }, { "id": "d1-obed2", "recipeId": "курица-салат", "portions": 1 }, { "id": "d1-frukt", "recipeId": "яблоко", "portions": 1 }],
+      "snacks": []
+    },
+    "2025-02-04": {
+      "breakfast": [{ "id": "d2-zavtrak", "recipeId": "цельнозерновой-хлеб-сыр", "portions": 1 }],
+      "lunch": [],
+      "dinner": [],
+      "snacks": []
+    }
+  },
+  "preparations": []
+}
