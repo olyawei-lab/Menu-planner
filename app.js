@@ -211,7 +211,9 @@ class MenuPlanner {
 
     // Изменение месяца
     changeMonth(delta) {
-        this.currentDate.setMonth(this.currentDate.getMonth() + delta);
+        const year = this.currentDate.getFullYear();
+        const month = this.currentDate.getMonth() + delta;
+        this.currentDate = new Date(year, month, 1);
         this.renderMonthView();
     }
 
