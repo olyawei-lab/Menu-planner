@@ -94,18 +94,29 @@ header h1, header h2 {
     margin-bottom: 20px;
 }
 
+.week-day-header {
+    text-align: center;
+    font-weight: 600;
+    font-size: 12px;
+    color: var(--text-light);
+    padding: 8px 0;
+}
+
 .week-day {
     aspect-ratio: 1;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     background: var(--bg);
     border-radius: 8px;
     cursor: pointer;
-    padding: 4px;
-    font-size: 12px;
+    font-size: 14px;
     transition: all 0.2s;
+}
+
+.week-day.empty {
+    background: transparent;
+    cursor: default;
 }
 
 .week-day:hover {
@@ -116,10 +127,17 @@ header h1, header h2 {
 .week-day.today {
     background: var(--primary);
     color: white;
+    font-weight: bold;
 }
 
 .week-day.has-meals {
     border: 2px solid var(--success);
+}
+
+.week-day.has-meals.today {
+    border: 2px solid var(--success);
+    background: var(--primary);
+    color: white;
 }
 
 /* Week Days View */
