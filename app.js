@@ -160,26 +160,49 @@ class MenuPlanner {
         const grid = document.getElementById('week-grid');
         grid.innerHTML = '';
 
-        const startOfWeek = new Date(this.currentDate);
-        startOfWeek.setDate(startOfWeek.getDate() - startOfWeek.getDay());
-
         document.getElementById('current-month').textContent = 
             this.currentDate.toLocaleDateString('ru-RU', { month: 'long', year: 'numeric' });
 
-        for (let i = 0; i < 7; i++) {
-            const date = new Date(startOfWeek);
-            date.setDate(date.getDate() + i);
+        // Дни недели в заголовке
+        const weekDays = ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'];
+        weekDays.forEach(day => {
+            const header = document.createElement('div');
+            header.className = 'week-day-header';
+            header.textContent = day;
+            grid.appendChild(header);
+        });
+
+        // Первый день месяца
+        const year = this.currentDate.getFullYear();
+        const month = this.currentDate.getMonth();
+        const firstDay = new Date(year, month, 1);
+        
+        // День недели первого дня (0 = воскресенье, 1 = понедельник...)
+        // Нужно преобразовать чтобы понедельник был 0
+        let firstDayOfWeek = firstDay.getDay() - 1;
+        if (firstDayOfWeek < 0) firstDayOfWeek = 6;
+
+        // Пустые ячейки до первого дня
+        for (let i = 0; i < firstDayOfWeek; i++) {
+            const empty = document.createElement('div');
+            empty.className = 'week-day empty';
+            grid.appendChild(empty);
+        }
+
+        // Все дни месяца
+        const daysInMonth = new Date(year, month + 1, 0).getDate();
+        const today = this.formatDate(new Date());
+
+        for (let day = 1; day <= daysInMonth; day++) {
+            const date = new Date(year, month, day);
             const dateStr = this.formatDate(date);
             const hasMeals = this.hasMeals(dateStr);
+            const isToday = dateStr === today;
 
             const el = document.createElement('div');
-            el.className = 'week-day' + (hasMeals ? ' has-meals' : '');
+            el.className = 'week-day' + (hasMeals ? ' has-meals' : '') + (isToday ? ' today' : '');
             el.dataset.date = dateStr;
-            
-            const dayName = date.toLocaleDateString('ru-RU', { weekday: 'short' });
-            const dayNum = date.getDate();
-            
-            el.innerHTML = `<span>${dayName}</span><strong>${dayNum}</strong>`;
+            el.textContent = day;
             grid.appendChild(el);
         }
 
@@ -188,7 +211,9 @@ class MenuPlanner {
 
     // Изменение месяца
     changeMonth(delta) {
-        this.currentDate.setMonth(this.currentDate.getMonth() + delta);
+        const year = this.currentDate.getFullYear();
+        const month = this.currentDate.getMonth() + delta;
+        this.currentDate = new Date(year, month, 1);
         this.renderMonthView();
     }
 

@@ -2,127 +2,52 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Меню Планировщик</title>
-    <link rel="manifest" href="manifest.json">
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div id="app">
-        <!-- Главное меню -->
-        <div id="main-view" class="view active">
-            <header>
-                <h1>🍽️ Меню</h1>
-                <div class="month-nav">
-                    <button id="prev-month">←</button>
-                    <span id="current-month">Месяц</span>
-                    <button id="next-month">→</button>
-                </div>
-            </header>
-            
-            <div id="week-grid"></div>
-            
-            <div class="actions">
-                <button id="btn-products" class="btn">🛒 Список покупок</button>
-                <button id="btn-preparations" class="btn">📦 Заготовки</button>
-                <button id="btn-import" class="btn">📄 Загрузить PDF</button>
-            </div>
-        </div>
-
-        <!-- Просмотр недели -->
-        <div id="week-view" class="view">
-            <header>
-                <button id="back-to-main" class="back-btn">←</button>
-                <h2 id="week-title">Неделя</h2>
-            </header>
-            <div id="week-days"></div>
-        </div>
-
-        <!-- Просмотр дня -->
-        <div id="day-view" class="view">
-            <header>
-                <button id="back-to-week" class="back-btn">←</button>
-                <h2 id="day-title">День</h2>
-            </header>
-            <div id="day-meals"></div>
-        </div>
-
-        <!-- Просмотр блюда -->
-        <div id="recipe-view" class="view">
-            <header>
-                <button id="back-to-day" class="back-btn">←</button>
-                <h2 id="recipe-title">Блюдо</h2>
-            </header>
-            <div id="recipe-content"></div>
-        </div>
-
-        <!-- Список покупок -->
-        <div id="products-view" class="view">
-            <header>
-                <button id="back-from-products" class="back-btn">←</button>
-                <h2>🛒 Список покупок</h2>
-            </header>
-            <div class="date-range">
-                <input type="date" id="products-from">
-                <span>по</span>
-                <input type="date" id="products-to">
-                <button id="btn-generate-products" class="btn-small">Сформировать</button>
-            </div>
-            <div id="products-list"></div>
-            <button id="btn-export-products" class="btn">📤 Экспорт</button>
-        </div>
-
-        <!-- Заготовки -->
-        <div id="preparations-view" class="view">
-            <header>
-                <button id="back-from-preps" class="back-btn">←</button>
-                <h2>📦 Заготовки</h2>
-            </header>
-            <div id="preparations-list"></div>
-            <button id="btn-add-prep" class="btn">+ Добавить заготовку</button>
-        </div>
-
-        <!-- Модальное окно корректировки -->
-        <div id="modal-adjust" class="modal">
-            <div class="modal-content">
-                <h3>Корректировка порции</h3>
-                <div class="form-group">
-                    <label>Порции:</label>
-                    <input type="number" id="adj-portions" min="1" value="1">
-                </div>
-                <div class="form-group">
-                    <label>На сколько дней:</label>
-                    <input type="number" id="adj-days" min="1" value="1">
-                </div>
-                <div class="form-group">
-                    <label>Комментарий:</label>
-                    <input type="text" id="adj-comment" placeholder="например, без лактозы">
-                </div>
-                <div class="modal-actions">
-                    <button id="btn-cancel-adjust" class="btn">Отмена</button>
-                    <button id="btn-save-adjust" class="btn primary">Сохранить</button>
-                </div>
-            </div>
-        </div>
-
-        <!-- Модальное окно загрузки PDF -->
-        <div id="modal-pdf" class="modal">
-            <div class="modal-content">
-                <h3>Загрузить меню из PDF</h3>
-                <input type="file" id="pdf-input" accept=".pdf,.txt,.md">
-                <div class="modal-actions">
-                    <button id="btn-cancel-pdf" class="btn">Отмена</button>
-                    <button id="btn-save-pdf" class="btn primary">Загрузить</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <script src="app.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#FDF8F5">
+    <title>Meal Prep</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <script>
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('sw.js');
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#E8DED1',
+                        secondary: '#D4C4B0',
+                        accent: '#C4A77D',
+                        surface: '#FDF8F5',
+                        text: '#4A4538',
+                        muted: '#9B9285'
+                    },
+                    fontFamily: {
+                        sans: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif']
+                    }
+                }
+            }
         }
     </script>
+    <style>
+        * { -webkit-tap-highlight-color: transparent; }
+        body { background: #FDF8F5; color: #4A4538; }
+        .drawer-enter { transform: translateY(100%); }
+        .drawer-enter-active { transform: translateY(0); transition: transform 0.3s ease-out; }
+        .drawer-exit { transform: translateY(0); }
+        .drawer-exit-active { transform: translateY(100%); transition: transform 0.3s ease-in; }
+        .fade-in { animation: fadeIn 0.2s ease-out; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        .scale-btn:active { transform: scale(0.95); }
+    </style>
+</head>
+<body class="min-h-screen">
+    <div id="root"></div>
+    
+    <!-- React + ReactDOM -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    
+    <!-- Babel -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <!-- Application -->
+    <script type="text/babel" src="src/app.js"></script>
 </body>
 </html>
