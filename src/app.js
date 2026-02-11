@@ -225,6 +225,65 @@ const Settings = ({ apiUrl, onSave, onBack }) => {
                     >
                         Сохранить
                     </button>
+                    
+                    <hr class="border-gray-200 my-4" />
+                    
+                    <div>
+                        <label class="block text-sm text-muted mb-2">📄 Загрузить меню (PDF)</label>
+                        <input 
+                            type="file" 
+                            accept=".pdf"
+                            id="pdf-upload"
+                            class="hidden"
+                            onChange={(e) => {
+                                const file = e.target.files[0];
+                                if (file) {
+                                    alert('PDF загружен! Функция появится после запуска бэкенда на Raspberry Pi');
+                                }
+                            }}
+                        />
+                        <label 
+                            htmlFor="pdf-upload"
+                            class="block w-full py-3 bg-primary/50 text-text text-center rounded-xl cursor-pointer active:bg-primary/70"
+                        >
+                            📄 Выбрать файл
+                        </label>
+                        <p class="text-xs text-muted mt-2">
+                            Загрузи PDF с меню (функция требует запущенного бэкенда)
+                        </p>
+                    </div>
+                    
+                    <hr class="border-gray-200 my-4" />
+                    
+                    <div>
+                        <label class="block text-sm text-muted mb-2">➕ Добавить рецепт вручную</label>
+                        <input 
+                            type="text" 
+                            id="recipe-name"
+                            placeholder="Название блюда"
+                            class="w-full px-4 py-3 bg-primary/30 rounded-xl mb-2"
+                        />
+                        <textarea 
+                            id="recipe-text"
+                            placeholder="Описание, ингредиенты..."
+                            class="w-full px-4 py-3 bg-primary/30 rounded-xl mb-2"
+                            rows="3"
+                        />
+                        <button 
+                            onClick={() => {
+                                const name = document.getElementById('recipe-name').value;
+                                const text = document.getElementById('recipe-text').value;
+                                if (name) {
+                                    alert(`Рецепт "${name}" сохранён локально!`);
+                                    document.getElementById('recipe-name').value = '';
+                                    document.getElementById('recipe-text').value = '';
+                                }
+                            }}
+                            class="w-full py-3 bg-green-500 text-white rounded-xl font-medium active:bg-green-600"
+                        >
+                            💾 Сохранить
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
