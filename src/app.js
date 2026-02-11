@@ -40,7 +40,77 @@ const DEMO_RECIPES = {
            instructions: "1. Положить яйцо в холодную воду.\n2. Довести до кипения.\n3. Варить 10 минут." },
     "10": { id: 10, name: "Куриная грудка", calories: 130, protein: 30, fat: 2, carbs: 0,
             ingredients: [{name: "Куриная грудка", amount: 130, unit: "г"}],
-            instructions: "1. Промыть грудку.\n2. Запечь в духовке при 180°С 25-30 минут или обжарить на сковороде." }
+            instructions: "1. Промыть грудку.\n2. Запечь в духовке при 180°С 25-30 минут или обжарить на сковороде." },
+    // Дополнительные рецепты
+    "11": { id: 11, name: "Омлет из 2 яиц", calories: 294, protein: 24, fat: 22, carbs: 2,
+            ingredients: [{name: "Яйца", amount: 2, unit: "шт"}],
+            instructions: "1. Взбить яйца.\n2. Вылить на сковороду.\n3. Жарить до готовности." },
+    "12": { id: 12, name: "Хлеб + творожный сыр + семга", calories: 294, protein: 18, fat: 18, carbs: 15,
+            ingredients: [{name: "Хлеб цельнозерновой", amount: 20, unit: "г"}, {name: "Творожный сыр", amount: 25, unit: "г"}, {name: "Семга слабосолёная", amount: 30, unit: "г"}],
+            instructions: "1. Взять хлеб.\n2. Намазать творожный сыр.\n3. Положить семгу." },
+    "13": { id: 13, name: "Каша на выбор", calories: 150, protein: 5, fat: 3, carbs: 28,
+            ingredients: [{name: "Каша (геркулес/греча/рис)", amount: 40, unit: "г сух"}, {name: "Молоко/вода", amount: 200, unit: "мл"}],
+            instructions: "1. Залить крупу водой/молоком.\n2. Варить до готовности." },
+    "14": { id: 14, name: "Творог с ягодами", calories: 230, protein: 18, fat: 5, carbs: 22,
+            ingredients: [{name: "Творог 5%", amount: 110, unit: "г"}, {name: "Ягоды", amount: 100, unit: "г"}],
+            instructions: "1. Смешать творог с ягодами." },
+    "15": { id: 15, name: "Батончик злаковый", calories: 180, protein: 8, fat: 6, carbs: 28,
+            ingredients: [{name: "Батончик (без сахара)", amount: 45, unit: "г"}],
+            instructions: "Съесть как перекус." },
+    "16": { id: 16, name: "Груша", calories: 60, protein: 0, fat: 0, carbs: 15,
+            ingredients: [{name: "Груша", amount: 100, unit: "г"}],
+            instructions: "Помыть и съесть." },
+    "17": { id: 17, name: "Рыба (семга/хек/скумбрия)", calories: 180, protein: 25, fat: 10, carbs: 0,
+            ingredients: [{name: "Рыба", amount: 120, unit: "г в готовом"}],
+            instructions: "1. Замариновать со специями.\n2. Запечь в фольге при 180°С 20-25 минут." },
+    "18": { id: 18, name: "Салат из свеклы", calories: 100, protein: 3, fat: 5, carbs: 12,
+            ingredients: [{name: "Свекла варёная", amount: 90, unit: "г"}, {name: "Чернослив", amount: 30, unit: "г"}, {name: "Йогурт", amount: 20, unit: "г"}],
+            instructions: "1. Натереть свеклу.\n2. Мелко нарезать чернослив.\n3. Смешать с йогуртом." },
+    "19": { id: 19, name: "Йогурт с ягодами", calories: 150, protein: 8, fat: 6, carbs: 18,
+            ingredients: [{name: "Йогурт натуральный", amount: 150, unit: "г"}, {name: "Ягоды", amount: 50, unit: "г"}],
+            instructions: "Смешать йогурт с ягодами." },
+    "20": { id: 20, name: "Овсянка (Геркулес)", calories: 150, protein: 5, fat: 3, carbs: 28,
+            ingredients: [{name: "Геркулес", amount: 30, unit: "г сух"}, {name: "Вода/молоко", amount: 200, unit: "мл"}, {name: "Изюм", amount: 20, unit: "г"}],
+            instructions: "1. Сварить кашу.\n2. Добавить изюм." },
+    "21": { id: 21, name: "Макароны твёрдых сортов", calories: 200, protein: 7, fat: 1, carbs: 42,
+            ingredients: [{name: "Макароны", amount: 65, unit: "г сух"}],
+            instructions: "Отварить макароны до состояния аль денте." },
+    "22": { id: 22, name: "Индейка", calories: 140, protein: 28, fat: 3, carbs: 0,
+            ingredients: [{name: "Филе индейки", amount: 110, unit: "г в готовом"}],
+            instructions: "1. Замариновать.\n2. Запечь или обжарить." },
+    "23": { id: 23, name: "Греческий салат", calories: 250, protein: 12, fat: 18, carbs: 12,
+            ingredients: [{name: "Огурцы/помидоры/перец", amount: 200, unit: "г"}, {name: "Фетакса/моцарелла", amount: 40, unit: "г"}, {name: "Маслины", amount: 20, unit: "г"}, {name: "Масло", amount: 10, unit: "мл"}],
+            instructions: "1. Нарезать овощи.\n2. Добавить сыр и маслины.\n3. Заправить маслом." },
+    "24": { id: 24, name: "Ряженка", calories: 150, protein: 8, fat: 6, carbs: 15,
+            ingredients: [{name: "Ряженка 4%", amount: 250, unit: "мл"}],
+            instructions: "Выпить." },
+    "25": { id: 25, name: "Орехи", calories: 180, protein: 6, fat: 16, carbs: 6,
+            ingredients: [{name: "Орехи микс", amount: 30, unit: "г"}],
+            instructions: "Съесть порцию орехов." },
+    "26": { id: 26, name: "Куриные тефтели", calories: 200, protein: 22, fat: 8, carbs: 12,
+            ingredients: [{name: "Фарш куриный", amount: 100, unit: "г"}, {name: "Лук", amount: 20, unit: "г"}, {name: "Яйцо", amount: 0.25, unit: "шт"}],
+            instructions: "1. Смешать фарш с луком и яйцом.\n2. Сформировать тефтели.\n3. Тушить в соусе 20-25 минут." },
+    "27": { id: 27, name: "Смузи (йогурт + клубника + банан)", calories: 200, protein: 8, fat: 4, carbs: 32,
+            ingredients: [{name: "Йогурт", amount: 200, unit: "мл"}, {name: "Клубника", amount: 70, unit: "г"}, {name: "Банан", amount: 50, unit: "г"}],
+            instructions: "Взбить всё в блендере." },
+    "28": { id: 28, name: "Творожники", calories: 250, protein: 22, fat: 8, carbs: 25,
+            ingredients: [{name: "Творог 5%", amount: 200, unit: "г"}, {name: "Яйцо", amount: 1, unit: "шт"}, {name: "Мука", amount: 30, unit: "г"}],
+            instructions: "1. Смешать творог с яйцом и мукой.\n2. Жарить на антипригарной сковороде." },
+    "29": { id: 29, name: "Запечённый картофель", calories: 100, protein: 3, fat: 1, carbs: 22,
+            ingredients: [{name: "Картофель", amount: 100, unit: "г"}],
+            instructions: "1. Помыть картофель.\n2. Запечь в духовке при 200°С 30-40 минут." },
+    "30": { id: 30, name: "Рис", calories: 200, protein: 4, fat: 1, carbs: 45,
+            ingredients: [{name: "Рис", amount: 60, unit: "г сух"}],
+            instructions: "1. Промыть рис.\n2. Залить водой 1:2.\n3. Варить 20 минут." },
+    "31": { id: 31, name: "Йогурт", calories: 100, protein: 8, fat: 5, carbs: 8,
+            ingredients: [{name: "Йогурт натуральный", amount: 150, unit: "г"}],
+            instructions: "Съесть." },
+    "32": { id: 32, name: "Морепродукты", calories: 120, protein: 25, fat: 2, carbs: 5,
+            ingredients: [{name: "Морепродукты", amount: 130, unit: "г в готовом"}],
+            instructions: "1. Отварить или обжарить со специями." },
+    "33": { id: 33, name: "Греча", calories: 200, protein: 7, fat: 2, carbs: 40,
+            ingredients: [{name: "Греча", amount: 65, unit: "г сух"}],
+            instructions: "1. Промыть гречу.\n2. Залить водой 1:2.\n3. Варить 20 минут." }
 };
 
 const DEMO_MENU = {
@@ -60,6 +130,63 @@ const DEMO_MENU = {
         ],
         "ужин": [
             {id: 8, recipe_id: "8", portions_multiplier: 1, calories: 224, text: "Салат с моцареллой"}
+        ]
+    },
+    "2026-02-10": {
+        "завтрак": [
+            {id: 9, recipe_id: "9", portions_multiplier: 1, calories: 70, text: "Вареное яйцо"},
+            {id: 10, recipe_id: "2", portions_multiplier: 1, calories: 200, text: "Хлеб + сыр"}
+        ],
+        "перекус": [
+            {id: 11, recipe_id: "14", portions_multiplier: 1, calories: 230, text: "Творог с ягодами"},
+            {id: 12, recipe_id: "16", portions_multiplier: 1, calories: 60, text: "Груша"}
+        ],
+        "обед": [
+            {id: 13, recipe_id: "21", portions_multiplier: 1, calories: 200, text: "Макароны"},
+            {id: 14, recipe_id: "10", portions_multiplier: 1, calories: 130, text: "Куриная грудка"},
+            {id: 15, recipe_id: "6", portions_multiplier: 1, calories: 80, text: "Салат овощной"}
+        ],
+        "ужин": [
+            {id: 16, recipe_id: "17", portions_multiplier: 1, calories: 180, text: "Рыба"},
+            {id: 17, recipe_id: "29", portions_multiplier: 1, calories: 100, text: "Картофель"}
+        ]
+    },
+    "2026-02-11": {
+        "завтрак": [
+            {id: 18, recipe_id: "11", portions_multiplier: 1, calories: 294, text: "Омлет из 2 яиц"},
+            {id: 19, recipe_id: "12", portions_multiplier: 1, calories: 294, text: "Хлеб + творожный сыр + семга"}
+        ],
+        "перекус": [
+            {id: 20, recipe_id: "15", portions_multiplier: 1, calories: 180, text: "Батончик злаковый"},
+            {id: 21, recipe_id: "7", portions_multiplier: 1, calories: 60, text: "Яблоко"}
+        ],
+        "обед": [
+            {id: 22, recipe_id: "33", portions_multiplier: 1, calories: 200, text: "Греча"},
+            {id: 23, recipe_id: "22", portions_multiplier: 1, calories: 140, text: "Индейка"},
+            {id: 24, recipe_id: "23", portions_multiplier: 1, calories: 250, text: "Греческий салат"}
+        ],
+        "ужин": [
+            {id: 25, recipe_id: "18", portions_multiplier: 1, calories: 100, text: "Салат из свеклы"},
+            {id: 26, recipe_id: "32", portions_multiplier: 1, calories: 120, text: "Морепродукты"}
+        ]
+    },
+    "2026-02-12": {
+        "завтрак": [
+            {id: 27, recipe_id: "20", portions_multiplier: 1, calories: 150, text: "Овсянка"},
+            {id: 28, recipe_id: "25", portions_multiplier: 1, calories: 180, text: "Орехи"}
+        ],
+        "перекус": [
+            {id: 29, recipe_id: "19", portions_multiplier: 1, calories: 150, text: "Йогурт с ягодами"},
+            {id: 30, recipe_id: "7", portions_multiplier: 1, calories: 60, text: "Яблоко"}
+        ],
+        "обед": [
+            {id: 31, recipe_id: "30", portions_multiplier: 1, calories: 200, text: "Рис"},
+            {id: 32, recipe_id: "5", portions_multiplier: 1, calories: 165, text: "Курица без кожи"},
+            {id: 33, recipe_id: "6", portions_multiplier: 1, calories: 80, text: "Салат"}
+        ],
+        "ужин": [
+            {id: 34, recipe_id: "28", portions_multiplier: 1, calories: 250, text: "Творожники"},
+            {id: 35, recipe_id: "27", portions_multiplier: 1, calories: 200, text: "Смузи"}
         ]
     }
 };
