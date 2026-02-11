@@ -263,8 +263,8 @@ const Settings = ({ apiUrl, onSave, onBack, onLoadDemo }) => {
         <div class="fixed inset-0 bg-surface z-50 p-6">
             <div class="max-w-md mx-auto">
                 <div class="flex items-center mb-6">
-                    <button onClick={onBack} class="p-2 -ml-2"></span></button>
-<span>←                    <h1 class="text-xl font-medium ml-2">Настройки</h1>
+                    <button onClick={onBack} class="p-2 -ml-2"><span>←</span></button>
+                    <h1 class="text-xl font-medium ml-2">Настройки</h1>
                 </div>
                 
                 <div class="space-y-4">
