@@ -453,18 +453,19 @@ const App = () => {
         setCurrentDate(newDate);
     };
     
-    // Получить рецепт - ищем по recipe_id или по строке
-    const getRecipe = (recipeId) => {
-        // Сначала пробуем selectedMeal.recipe_id
-        const id = recipeId || selectedMeal?.recipe_id || selectedMeal?.recipe_key;
-        if (id && DEMO_RECIPES[id]) {
-            return DEMO_RECIPES[id];
+    // Получить рецепт
+    const getRecipe = () => {
+        const id = selectedMeal?.recipe_id || selectedMeal?.recipe_key || selectedMeal?.id;
+        console.log('getRecipe:', id, DEMO_RECIPES[id]);
+        if (id && DEMO_RECIPES[id]) return DEMO_RECIPES[id];
+        if (id && DEMO_RECIPES[String(id)]) return DEMO_RECIPES[String(id)];
+        // Fallback - пробуем все ключи
+        for (const key in DEMO_RECIPES) {
+            if (DEMO_RECIPES[key].name.includes(selectedMeal?.text?.split(' ')[0] || '')) {
+                return DEMO_RECIPES[key];
+            }
         }
-        // Пробуем как строку
-        if (id && DEMO_RECIPES[String(id)]) {
-            return DEMO_RECIPES[String(id)];
-        }
-        return { name: 'Рецепт', ingredients: [], instructions: '' };
+        return { name: selectedMeal?.text || 'Рецепт', ingredients: [{name: 'Данные загружаются...', amount: 0, unit: ''}], instructions: '' };
     };
     
     return (
@@ -493,7 +494,7 @@ const App = () => {
                     )}
                     
                     {selectedMeal && (
-                        <RecipeModal recipe={getRecipe(selectedMeal.recipe_id || selectedMeal.recipe_key)} 
+                        <RecipeModal recipe={getRecipe()} 
                                     portions={modalPortions} 
                                     onClose={() => setSelectedMeal(null)}
                                     onPortionChange={handleModalPortionChange} />
