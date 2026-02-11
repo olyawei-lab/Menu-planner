@@ -2,60 +2,65 @@
 
 const { useState, useEffect, useMemo } = React;
 
-// Демо-данные меню (1250 ккал)
+// Демо-данные меню (1250 ккал) - по структуре PDF
 const DEMO_MENU = {
     "2026-02-09": {
-        breakfast: [{ id: 1, recipe_id: 1, recipe_name: "Омлет из 1 яйца", portions_multiplier: 1, calories: 70 }],
-        lunch: [
-            { id: 2, recipe_id: 2, recipe_name: "Творог с сухофруктами", portions_multiplier: 1, calories: 233 },
-            { id: 3, recipe_id: 3, recipe_name: "Курица с салатом", portions_multiplier: 1, calories: 250 },
-            { id: 4, recipe_id: 4, recipe_name: "Яблоко", portions_multiplier: 1, calories: 50 }
+        "завтрак": [{ id: 1, recipe_id: 1, recipe_name: "Омлет из 1 яйца", portions_multiplier: 1, calories: 270 }],
+        "перекус": [{ id: 2, recipe_id: 2, recipe_name: "Творог с сухофруктами", portions_multiplier: 1, calories: 233 }],
+        "обед": [
+            { id: 3, recipe_id: 3, recipe_name: "Крупа на выбор (греча/булгур/полба/геркулес/бурый рис/киноа)", portions_multiplier: 1, calories: 200 },
+            { id: 4, recipe_id: 4, recipe_name: "Курица без кожи (100г в готовом виде)", portions_multiplier: 1, calories: 165 },
+            { id: 5, recipe_id: 5, recipe_name: "Салат овощной (200г) + ½ ч.л. масла", portions_multiplier: 1, calories: 80 },
+            { id: 6, recipe_id: 6, recipe_name: "Яблоко 1 шт. (100-130г)", portions_multiplier: 1, calories: 70 }
         ],
-        dinner: [
-            { id: 5, recipe_id: 5, recipe_name: "Овощной салат с авокадо", portions_multiplier: 1, calories: 224 }
-        ],
-        snack: []
+        "ужин": [{ id: 7, recipe_id: 7, recipe_name: "Салат овощной (200г) + 1 ч.л. масла + моцарелла 20г + авокадо 40г", portions_multiplier: 1, calories: 224 }]
     },
     "2026-02-10": {
-        breakfast: [{ id: 6, recipe_id: 6, recipe_name: "Цельнозерновой хлеб + сыр", portions_multiplier: 1, calories: 200 }],
-        lunch: [
-            { id: 7, recipe_id: 3, recipe_name: "Курица с салатом (на 2 дня)", portions_multiplier: 2, calories: 500, note: "Приготовлено заранее" }
+        "завтрак": [{ id: 8, recipe_id: 8, recipe_name: "Цельнозерновой хлеб 50г + сыр 30г", portions_multiplier: 1, calories: 200 }],
+        "перекус": [{ id: 9, recipe_id: 2, recipe_name: "Творог с сухофруктами", portions_multiplier: 1, calories: 233 }],
+        "обед": [
+            { id: 10, recipe_id: 3, recipe_name: "Макароны твёрдых сортов 190г вар.", portions_multiplier: 1, calories: 200 },
+            { id: 11, recipe_id: 4, recipe_name: "Курица без кожи (100г)", portions_multiplier: 1, calories: 165 },
+            { id: 12, recipe_id: 5, recipe_name: "Салат овощной (200г) + ½ ч.л. масла", portions_multiplier: 1, calories: 80 },
+            { id: 13, recipe_id: 6, recipe_name: "Груша", portions_multiplier: 1, calories: 60 }
         ],
-        dinner: [
-            { id: 8, recipe_id: 5, recipe_name: "Овощной салат", portions_multiplier: 1, calories: 120 }
-        ],
-        snack: [{ id: 9, recipe_id: 4, recipe_name: "Груша", portions_multiplier: 1, calories: 60 }]
+        "ужин": [{ id: 14, recipe_id: 7, recipe_name: "Салат овощной (200г) + 1 ч.л. масла + моцарелла 20г", portions_multiplier: 1, calories: 190 }]
     },
     "2026-02-11": {
-        breakfast: [{ id: 10, recipe_id: 1, recipe_name: "Омлет", portions_multiplier: 1, calories: 70 }],
-        lunch: [
-            { id: 11, recipe_id: 7, recipe_name: "Греча", portions_multiplier: 1, calories: 200 },
-            { id: 12, recipe_id: 8, recipe_name: "Индейка", portions_multiplier: 1, calories: 180 }
+        "завтрак": [{ id: 15, recipe_id: 1, recipe_name: "Омлет из 1 яйца", portions_multiplier: 1, calories: 270 }],
+        "перекус": [{ id: 16, recipe_id: 6, recipe_name: "Яблоко", portions_multiplier: 1, calories: 70 }],
+        "обед": [
+            { id: 17, recipe_id: 3, recipe_name: "Греча 65г сухое", portions_multiplier: 1, calories: 200 },
+            { id: 18, recipe_id: 4, recipe_name: "Курица (100г)", portions_multiplier: 1, calories: 165 },
+            { id: 19, recipe_id: 5, recipe_name: "Салат (200г) + ½ ч.л. масла", portions_multiplier: 1, calories: 80 },
+            { id: 20, recipe_id: 6, recipe_name: "Апельсин", portions_multiplier: 1, calories: 60 }
         ],
-        dinner: [
-            { id: 13, recipe_id: 5, recipe_name: "Салат с моцареллой", portions_multiplier: 1, calories: 200 }
-        ],
-        snack: []
-    },
-    "2026-02-12": {
-        breakfast: [{ id: 14, recipe_id: 6, recipe_name: "Хлеб + творожный сыр", portions_multiplier: 1, calories: 180 }],
-        lunch: [
-            { id: 15, recipe_id: 3, recipe_name: "Курица (разогреть)", portions_multiplier: 2, calories: 500, note: "Заготовка" }
-        ],
-        dinner: [],
-        snack: []
+        "ужин": [{ id: 21, recipe_id: 7, recipe_name: "Салат + 1 ч.л. масла + моцарелла 20г + авокадо 40г", portions_multiplier: 1, calories: 224 }]
     }
 };
 
 const DEMO_RECIPES = {
-    1: { id: 1, name: "Омлет из 1 яйца", portions_base: 1, calories_per_portion: 70, protein: 6, fat: 5, carbs: 0.5, ingredients: [{name: "Яйцо", amount: 1, unit: "шт"}, {name: "Молоко", amount: 50, unit: "мл", optional: true}], instructions: "Взбить яйцо с молоком, обжарить на сковороде." },
-    2: { id: 2, name: "Творог с сухофруктами", portions_base: 1, calories_per_portion: 233, protein: 20, fat: 5, carbs: 25, ingredients: [{name: "Творог 4-5%", amount: 140, unit: "г"}, {name: "Сухофрукты", amount: 25, unit: "г"}], instructions: "Смешать творог с сухофруктами." },
-    3: { id: 3, name: "Курица с салатом", portions_base: 1, calories_per_portion: 250, protein: 30, fat: 10, carbs: 10, ingredients: [{name: "Курица без кожи", amount: 100, unit: "г"}, {name: "Овощи", amount: 200, unit: "г"}, {name: "Масло", amount: 5, unit: "мл"}], instructions: "Курицу приготовить. Овощи нарезать, заправить маслом." },
-    4: { id: 4, name: "Яблоко", portions_base: 1, calories_per_portion: 50, protein: 0, fat: 0, carbs: 14, ingredients: [{name: "Яблоко", amount: 120, unit: "г"}], instructions: "Съесть яблоко." },
-    5: { id: 5, name: "Овощной салат с авокадо", portions_base: 1, calories_per_portion: 224, protein: 8, fat: 15, carbs: 15, ingredients: [{name: "Овощи и зелень", amount: 200, unit: "г"}, {name: "Масло", amount: 10, unit: "мл"}, {name: "Моцарелла", amount: 20, unit: "г"}, {name: "Авокадо", amount: 40, unit: "г", optional: true}], instructions: "Нарезать овощи, добавить масло, моцареллу и авокадо." },
-    6: { id: 6, name: "Цельнозерновой хлеб + сыр", portions_base: 1, calories_per_portion: 200, protein: 10, fat: 8, carbs: 25, ingredients: [{name: "Хлеб цельнозерновой", amount: 50, unit: "г"}, {name: "Сыр", amount: 30, unit: "г"}], instructions: "Хлеб с сыром." },
-    7: { id: 7, name: "Греча", portions_base: 1, calories_per_portion: 200, protein: 7, fat: 2, carbs: 40, ingredients: [{name: "Греча", amount: 65, unit: "г"}, {name: "Вода", amount: 300, unit: "мл"}], instructions: "Отварить гречу в воде." },
-    8: { id: 8, name: "Индейка", portions_base: 1, calories_per_portion: 180, protein: 35, fat: 4, carbs: 0, ingredients: [{name: "Филе индейки", amount: 120, unit: "г"}], instructions: "Запечь или обжарить." }
+    1: { id: 1, name: "Омлет из 1 яйца", portions_base: 1, calories_per_portion: 270, protein: 20, fat: 20, carbs: 5, 
+        ingredients: [{name: "Яйцо", amount: 1, unit: "шт"}, {name: "Молоко", amount: 50, unit: "мл", optional: true}], 
+        instructions: "Взбить яйцо с молоком, обжарить на сковороде. Можно без молока." },
+    2: { id: 2, name: "Творог с сухофруктами", portions_base: 1, calories_per_portion: 233, protein: 20, fat: 5, carbs: 25,
+        ingredients: [{name: "Творог 4-5%", amount: 140, unit: "г"}, {name: "Сухофрукты", amount: 25, unit: "г"}],
+        instructions: "Смешать творог с сухофруктами." },
+    3: { id: 3, name: "Крупа на выбор", portions_base: 1, calories_per_portion: 200, protein: 7, fat: 2, carbs: 40,
+        ingredients: [{name: "Крупа (греча/булгур/полба/геркулес/рис/киноа)", amount: 65, unit: "г"}, {name: "Вода", amount: 300, unit: "мл"}],
+        instructions: "Отварить крупу в воде. Или макароны твёрдых сортов: 65г сухих = 190г варёных." },
+    4: { id: 4, name: "Курица без кожи", portions_base: 1, calories_per_portion: 165, protein: 31, fat: 4, carbs: 0,
+        ingredients: [{name: "Курица (бедро/голень без кожи)", amount: 100, unit: "г в готовом виде"}],
+        instructions: "Приготовить: тушить в сковороде с водой/томатной пастой/луком/морковью/травами." },
+    5: { id: 5, name: "Салат овощной", portions_base: 1, calories_per_portion: 80, protein: 2, fat: 5, carbs: 8,
+        ingredients: [{name: "Овощи (зелень/огурцы/помидоры/перец/капуста/редис/лук)", amount: 200, unit: "г"}, {name: "Масло растительное", amount: 5, unit: "мл (½ ч.л.)"}],
+        instructions: "Нарезать овощи, заправить маслом. Можно салатом или нарезкой." },
+    6: { id: 6, name: "Фрукт", portions_base: 1, calories_per_portion: 60, protein: 0, fat: 0, carbs: 15,
+        ingredients: [{name: "Яблоко/груша/апельсин/киви 2шт/ягоды 100г/банан", amount: 100, unit: "г"}],
+        instructions: "Съесть фрукт." },
+    7: { id: 7, name: "Ужин: Салат с моцареллой", portions_base: 1, calories_per_portion: 224, protein: 10, fat: 18, carbs: 8,
+        ingredients: [{name: "Овощи и зелень", amount: 200, unit: "г"}, {name: "Масло", amount: 10, unit: "мл (1 ч.л.)"}, {name: "Моцарелла", amount: 20, unit: "г"}, {name: "Авокадо", amount: 40, unit: "г", optional: true}],
+        instructions: "Нарезать овощи, добавить масло, моцареллу. Авокадо можно не добавлять, тогда +1 ч.л. масла." }
 };
 
 const Icons = {
@@ -145,10 +150,10 @@ const Calendar = ({ currentDate, meals, onDayClick }) => {
                             <>
                                 <span class="text-sm font-medium">{day.day}</span>
                                 <div class="flex gap-0.5 mt-0.5">
-                                    {day.meals?.breakfast?.length > 0 && <span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>}
-                                    {day.meals?.lunch?.length > 0 && <span class="w-1.5 h-1.5 rounded-full bg-green-400"></span>}
-                                    {day.meals?.dinner?.length > 0 && <span class="w-1.5 h-1.5 rounded-full bg-blue-400"></span>}
-                                    {day.meals?.snack?.length > 0 && <span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span>}
+                                    {day.meals?.завтрак?.length > 0 && <span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>}
+                                    {day.meals?.перекус?.length > 0 && <span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span>}
+                                    {day.meals?.обед?.length > 0 && <span class="w-1.5 h-1.5 rounded-full bg-green-400"></span>}
+                                    {day.meals?.ужин?.length > 0 && <span class="w-1.5 h-1.5 rounded-full bg-blue-400"></span>}
                                 </div>
                             </>
                         )}
@@ -161,10 +166,10 @@ const Calendar = ({ currentDate, meals, onDayClick }) => {
 
 const DayDrawer = ({ date, meals, onClose, onMealClick }) => {
     const mealTypes = [
-        { key: 'breakfast', name: '🥣 Завтрак', empty: 'Нет завтрака' },
-        { key: 'lunch', name: '🥗 Обед', empty: 'Нет обеда' },
-        { key: 'dinner', name: '🍽️ Ужин', empty: 'Нет ужина' },
-        { key: 'snack', name: '🍿 Перекус', empty: 'Нет перекуса' }
+        { key: 'завтрак', name: '🥣 Завтрак (≈270 ккал)', empty: 'Нет завтрака' },
+        { key: 'перекус', name: '🍿 Перекус (≈230 ккал)', empty: 'Нет перекуса' },
+        { key: 'обед', name: '🥗 Обед (≈520 ккал)', empty: 'Нет обеда' },
+        { key: 'ужин', name: '🍽️ Ужин (≈220 ккал)', empty: 'Нет ужина' }
     ];
     
     const dateObj = date ? new Date(date + 'T00:00:00') : null;
