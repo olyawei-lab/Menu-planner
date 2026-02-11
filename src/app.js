@@ -453,13 +453,16 @@ const App = () => {
         setCurrentDate(newDate);
     };
     
-    // Получить рецепт
+    // Получить рецепт - ищем по recipe_id или по строке
     const getRecipe = (recipeId) => {
-        if (selectedMeal?.recipe_key && DEMO_RECIPES[selectedMeal.recipe_key]) {
-            return DEMO_RECIPES[selectedMeal.recipe_key];
+        // Сначала пробуем selectedMeal.recipe_id
+        const id = recipeId || selectedMeal?.recipe_id || selectedMeal?.recipe_key;
+        if (id && DEMO_RECIPES[id]) {
+            return DEMO_RECIPES[id];
         }
-        if (recipeId && DEMO_RECIPES[recipeId]) {
-            return DEMO_RECIPES[recipeId];
+        // Пробуем как строку
+        if (id && DEMO_RECIPES[String(id)]) {
+            return DEMO_RECIPES[String(id)];
         }
         return { name: 'Рецепт', ingredients: [], instructions: '' };
     };
