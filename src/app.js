@@ -59,10 +59,10 @@ async function loadRecipes() {
         const response = await fetch('data/recipes.json');
         if (response.ok) {
             DEMO_RECIPES = await response.json();
-            console.log('✅ Загружено рецептов:', Object.keys(DEMO_RECIPES).length);
+            console.log('Загружено рецептов:', Object.keys(DEMO_RECIPES).length);
         }
     } catch (e) {
-        console.log('📋 Используем встроенные рецепты');
+        console.log('Используем пустые рецепты');
     }
 }
 
@@ -70,14 +70,12 @@ async function loadRecipes() {
 const DEMO_MENU = {};
 function generateMenu() {
     const mealTypes = ['breakfast', 'snack', 'lunch', 'dinner'];
-    const mealEmoji = {'breakfast': '🥣', 'snack': '🍿', 'lunch': '🥗', 'dinner': '🍽️'};
     
-    // Проверяем есть ли загруженные рецепты
     const recipeCount = Object.keys(DEMO_RECIPES).length;
     const totalRecipes = recipeCount > 0 ? recipeCount : 348;
     
     let recipeId = 1;
-    const startDate = new Date(2026, 1, 1); // 1 февраля
+    const startDate = new Date(2026, 1, 1);
     
     for (let d = 0; d < 90; d++) {
         const date = new Date(startDate);
@@ -88,7 +86,7 @@ function generateMenu() {
         for (const mt of mealTypes) {
             DEMO_MENU[dateStr][mt] = [];
             if (recipeId <= totalRecipes) {
-                const recipe = DEMO_RECIPES[String(recipeId)] || {name: `Рецепт #${recipeId}`, ingredients: [], calories: 0};
+                const recipe = DEMO_RECIPES[String(recipeId)] || {name: 'Рецепт ' + recipeId, ingredients: [], calories: 0};
                 const kbju = recipe.calories > 0 ? {cal: recipe.calories} : calcRecipeKBJU(recipe.ingredients || []);
                 
                 DEMO_MENU[dateStr][mt].push({
@@ -193,7 +191,7 @@ const DayDrawer = ({ date, meals, onClose, onMealClick, onRefresh }) => {
                         const dayMeals = meals[key] || [];
                         return (
                             <div key={key} class="px-6 py-3 border-b border-gray-50">
-                                <h3 class="text-xs text-muted uppercase tracking-wider mb-2">{name} {label}</h3>
+                                <h3 class="text-xs text-muted uppercase mb-2">{name} {label}</h3>
                                 {dayMeals.length > 0 ? (
                                     <div class="space-y-2">
                                         {dayMeals.map((meal, idx) => (
@@ -201,7 +199,7 @@ const DayDrawer = ({ date, meals, onClose, onMealClick, onRefresh }) => {
                                                  class="p-3 bg-primary/30 rounded-xl cursor-pointer">
                                                 <div class="flex justify-between items-start">
                                                     <div>
-                                                        <span class="font-medium">{meal.text || meal.recipe_name}</span>
+                                                        <span class="font-medium">{meal.text}</span>
                                                         {meal.kbju && <span class="text-xs text-accent ml-2">🔥 {meal.kbju.cal} ккал</span>}
                                                     </div>
                                                     <span class="text-xs bg-accent/20 text-accent px-2 py-0.5 rounded">×{meal.portions_multiplier}</span>
@@ -230,7 +228,7 @@ const RecipeModal = ({ recipe, portions, onClose }) => {
             <div class="relative bg-surface rounded-t-3xl w-full max-w-md max-h-[85vh] overflow-hidden flex flex-col">
                 <div class="px-6 py-4 border-b border-gray-100">
                     <button onClick={onClose} class="absolute right-4 top-4 text-muted">✕</button>
-                    <h2 class="text-xl font-medium pr-8">{recipe.name || recipe.text}</h2>
+                    <h2 class="text-xl font-medium pr-8">{recipe.name}</h2>
                 </div>
                 <div class="px-6 py-3 bg-primary/30">
                     <div class="flex justify-between text-center">
@@ -272,10 +270,8 @@ const App = () => {
     const [selectedMeal, setSelectedMeal] = useState(null);
     
     useEffect(() => {
-        // Загружаем рецепты
         loadRecipes().then(() => {
             generateMenu();
-            // Загружаем меню из localStorage
             const saved = localStorage.getItem('meal_plan');
             if (saved) {
                 try { setMeals(JSON.parse(saved)); } 
@@ -301,7 +297,7 @@ const App = () => {
         loadRecipes().then(() => {
             generateMenu();
             setMeals(DEMO_MENU);
-            alert('✅ Данные обновлены!');
+            alert('Данные обновлены!');
         });
     };
     
@@ -316,12 +312,12 @@ const App = () => {
             
             <div class="fixed bottom-6 left-6 right-6 flex justify-between">
                 <button onClick={() => changeMonth(-1)} class="w-12 h-12 bg-surface shadow-lg rounded-full flex items-center justify-center">←</button>
-                <button onClick={() => changeMonth(1)} class="w-12 h-12 bg-surface flex items-center justify shadow-lg rounded-full-center">→</button>
+                <button onClick={() => changeMonth(1)} class="w-12 h-12 bg-surface shadow-lg rounded-full flex items-center justify-center">→</button>
             </div>
             
             <div class="fixed bottom-24 left-6 right-6 flex justify-between px-4">
-                <button onClick={handleRefresh} class="p-3 bg-surface shadow rounded-full">📥 Обновить</button>
-                <button class="p-3 bg-surface shadow rounded-full" onClick={() => alert('🛒')}>🛒</button>
+                <button onClick={handleRefresh} class="p-3 bg-surface shadow rounded-full">Обновить</button>
+                <button class="p-3 bg-surface shadow rounded-full" onClick={() => alert('Корзина')}>🛒</button>
             </div>
             
             {selectedDate && (
