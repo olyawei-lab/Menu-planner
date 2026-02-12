@@ -1,6 +1,19 @@
 // 🍽️ Meal Prep App - Dynamic KBJU Calculator
 const { useState, useEffect, useMemo, useCallback } = React;
 
+// Нормализаторы веса (штуки → граммы)
+const UNIT_NORMALIZER = {
+    "яйцо": 50,  // 1 яйцо ≈ 50г
+    "яйца": 50,
+    "банан": 120,  // 1 банан ≈ 120г
+    "яблоко": 150,  // 1 яблоко ≈ 150г
+    "груша": 150,
+    "апельсин": 150,
+    "лимон": 80,
+    "помидор": 100,
+    "перец": 80,
+};
+
 // Справочник КБЖУ на 100г
 const KBJU_REF = {
     "яйцо": {"cal": 157, "prot": 12.7, "fat": 10.6, "carbs": 0.7},
@@ -48,40 +61,65 @@ const KBJU_REF = {
     "тофу": {"cal": 75, "prot": 8, "fat": 4.5, "carbs": 2},
 };
 
-function getKBJU(name, amount) {
+// Нормализовать вес (штуки → граммы)
+function normalizeWeight(name, amount, unit) {
+    if (unit === 'шт' || unit === 'шт.') {
+        // Пробуем найти нормализатор по названию
+        const nameLower = name.toLowerCase();
+        for (const [key, grams] of Object.entries(UNIT_NORMALIZER)) {
+            if (nameLower.includes(key)) {
+                return amount * grams;
+            }
+        }
+        // По умолчанию если не нашли
+        return amount;  // Возвращаем как есть
+    }
+    return amount;
+}
+
+// Расчёт КБЖУ для одного ингредиента
+function getKBJU(name, amount, unit = 'г') {
+    const grams = normalizeWeight(name, amount, unit);
     const nameLower = name.toLowerCase();
+    
     for (const [key, value] of Object.entries(KBJU_REF)) {
         if (nameLower.includes(key)) {
-            const multiplier = amount / 100;
+            const multiplier = grams / 100;
             return {
                 cal: Math.round(value.cal * multiplier * 10) / 10,
                 prot: Math.round(value.prot * multiplier * 10) / 10,
                 fat: Math.round(value.fat * multiplier * 10) / 10,
                 carbs: Math.round(value.carbs * multiplier * 10) / 10,
-                hasKBJU: true
+                hasKBJU: true,
+                grams: grams  // возвращаем нормализованный вес
             };
         }
     }
-    return { cal: 0, prot: 0, fat: 0, carbs: 0, hasKBJU: false };
+    return { cal: 0, prot: 0, fat: 0, carbs: 0, hasKBJU: false, grams: grams };
 }
 
+// Расчёт КБЖУ всего блюда
 function calculateRecipeKBJU(ingredients, portions = 1) {
     let total = { cal: 0, prot: 0, fat: 0, carbs: 0 };
+    
     ingredients.forEach(ing => {
-        const kbju = getKBJU(ing.name, ing.amount);
-        total.cal += kbju.cal * portions;
-        total.prot += kbju.prot * portions;
-        total.fat += kbju.fat * portions;
-        total.carbs += kbju.carbs * portions;
+        const kbju = getKBJU(ing.name, ing.amount, ing.unit);
+        total.cal += kbju.cal;
+        total.prot += kbju.prot;
+        total.fat += kbju.fat;
+        total.carbs += kbju.carbs;
     });
+    
+    // Умножаем на порции только один раз (итоговое КБЖУ блюда × порции)
     return {
-        cal: Math.round(total.cal * 10) / 10,
-        prot: Math.round(total.prot * 10) / 10,
-        fat: Math.round(total.fat * 10) / 10,
-        carbs: Math.round(total.carbs * 10) / 10
+        cal: Math.round(total.cal * portions * 10) / 10,
+        prot: Math.round(total.prot * portions * 10) / 10,
+        fat: Math.round(total.fat * portions * 10) / 10,
+        carbs: Math.round(total.carbs * portions * 10) / 10
     };
 }
 
+// DEMO данные
 const DEMO_RECIPES = {
     "1": { id: 1, name: "Омлет из 1 яйца", portions_base: 1,
             ingredients: [{name: "Яйцо", amount: 1, unit: "шт"}, {name: "Молоко", amount: 50, unit: "мл", optional: true}],
@@ -102,7 +140,7 @@ const DEMO_RECIPES = {
             ingredients: [{name: "Овощи", amount: 200, unit: "г"}, {name: "Масло", amount: 5, unit: "мл"}],
             instructions: "Нарезать овощи, заправить маслом." },
     "7": { id: 7, name: "Яблоко", portions_base: 1,
-            ingredients: [{name: "Яблоко", amount: 100, unit: "г"}],
+            ingredients: [{name: "Яблоко", amount: 1, unit: "шт"}],
             instructions: "Съесть." },
     "8": { id: 8, name: "Салат с моцареллой", portions_base: 1,
             ingredients: [{name: "Овощи", amount: 200, unit: "г"}, {name: "Масло", amount: 10, unit: "мл"}, {name: "Моцарелла", amount: 20, unit: "г"}, {name: "Авокадо", amount: 40, unit: "г", optional: true}],
@@ -183,7 +221,7 @@ const RecipeModal = ({ recipe, portions, onClose, onPortionChange, onReplace }) 
                 <div class="px-6 py-4 border-b border-gray-100">
                     <button onClick={onClose} class="absolute right-4 top-4 text-muted">✕</button>
                     <h2 class="text-xl font-medium pr-8">{recipe.name}</h2>
-                    <p class="text-xs text-muted">🔢 Формула: (вес/100) × КБЖУ на 100г</p>
+                    <p class="text-xs text-muted">🔢 Формула: (вес × калории на 100г) ÷ 100</p>
                 </div>
                 <div class="px-6 py-3 bg-primary/30">
                     <div class="flex justify-between text-center">
@@ -206,12 +244,15 @@ const RecipeModal = ({ recipe, portions, onClose, onPortionChange, onReplace }) 
                     <h3 class="text-sm font-medium mb-3">🥗 Ингредиенты ({portions} порц.)</h3>
                     <div class="space-y-2">
                         {recipe.ingredients.map((ing, idx) => {
-                            const kbju = getKBJU(ing.name, ing.amount * portions);
+                            const kbju = getKBJU(ing.name, ing.amount * portions, ing.unit);
+                            const baseKbju = getKBJU(ing.name, ing.amount, ing.unit);
                             return (
                                 <div key={idx} class="flex justify-between py-2 border-b border-gray-100">
                                     <div class="flex-1">
                                         <span class={ing.optional ? "text-muted" : ""}>{ing.name}{ing.optional ? <span class="text-xs">(опц.)</span> : ''}</span>
-                                        <div class="text-xs text-muted">{(ing.amount * portions).toFixed(1)} {ing.unit}{kbju.hasKBJU ? <span class="ml-2 text-accent">🔥 {kbju.cal} ккал</span> : <span class="ml-2 text-gray-400">? ккал</span>}</div>
+                                        <div class="text-xs text-muted">{(ing.amount * portions).toFixed(1)} {ing.unit} → {kbju.grams.toFixed(0)}г
+                                            {kbju.hasKBJU ? <span class="ml-2 text-accent">🔥 {kbju.cal} ккал</span> : <span class="ml-2 text-gray-400">? ккал</span>}
+                                        </div>
                                     </div>
                                     <button onClick={() => onReplace(ing)} class="text-xs bg-yellow-100 text-yellow-700 px-2 py-1 rounded">🔄</button>
                                 </div>
@@ -354,8 +395,19 @@ const App = () => {
     };
     
     const handleReplace = (oldIng, newIng, updateAll) => {
-        alert(`🔄 Заменили "${oldIng.name}" → "${newIng.name}"${updateAll ? ' (во всех рецептах)' : ''}`);
+        // Обновляем DEMO_RECIPES
+        if (DEMO_RECIPES[selectedMeal.recipe_id]) {
+            const recipe = DEMO_RECIPES[selectedMeal.recipe_id];
+            recipe.ingredients = recipe.ingredients.map(ing => {
+                if (ing.name === oldIng.name) {
+                    return { ...ing, name: newIng.name };
+                }
+                return ing;
+            });
+        }
+        alert(`🔄 Заменили "${oldIng.name}" → "${newIng.name}"`);
         setReplaceModal(null);
+        setSelectedMeal(null);
     };
     
     const changeMonth = (delta) => { const d = new Date(currentDate); d.setMonth(d.getMonth() + delta); setCurrentDate(d); };
