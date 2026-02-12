@@ -349,6 +349,7 @@ const App = () => {
     const [selectedMeal, setSelectedMeal] = useState(null);
     const [modalPortions, setModalPortions] = useState(1);
     const [replaceModal, setReplaceModal] = useState(null);
+    const [recipeVersion, setRecipeVersion] = useState(0);  // Для принудительного ререндера
     
     useEffect(() => {
         const saved = localStorage.getItem('meal_plan');
@@ -388,11 +389,10 @@ const App = () => {
                 if (ing.name === oldIng.name) return { ...ing, name: newIng.name, replacedFrom: oldIng.name };
                 return ing;
             });
-            // Обновляем selectedMeal, чтобы UI перерендерился
-            setSelectedMeal({ ...selectedMeal, recipe_id: selectedMeal.recipe_id });
         }
         setReplaceModal(null);
-        // RecipeModal остаётся открытым, но перерендерится с новыми данными
+        // Принудительный ререндер RecipeModal
+        setRecipeVersion(prev => prev + 1);
     };
     
     const changeMonth = (delta) => { const d = new Date(currentDate); d.setMonth(d.getMonth() + delta); setCurrentDate(d); };
@@ -411,7 +411,7 @@ const App = () => {
                         <button onClick={() => setView('settings')} class="p-3 bg-surface shadow rounded-full">⚙️</button>
                     </div>
                     {selectedDate && <DayDrawer date={selectedDate} meals={meals[selectedDate] || {}} onClose={() => setSelectedDate(null)} onMealClick={handleMealClick} onUpdatePortion={handleUpdatePortion} />}
-                    {selectedMeal && <RecipeModal recipe={getRecipe()} portions={modalPortions} onClose={() => setSelectedMeal(null)} onPortionChange={setModalPortions} onReplace={(ing) => setReplaceModal(ing)} />}
+                    {selectedMeal && <RecipeModal key={recipeVersion} recipe={getRecipe()} portions={modalPortions} onClose={() => setSelectedMeal(null)} onPortionChange={setModalPortions} onReplace={(ing) => setReplaceModal(ing)} />}
                 </>
             )}
             {view === 'settings' && (
