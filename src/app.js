@@ -257,7 +257,7 @@ const RecipeModal = ({ recipe, portions, onClose, onPortionChange, onReplace }) 
 
 const ReplaceModal = ({ ingredient, onConfirm, onClose }) => {
     const [search, setSearch] = useState('');
-    const [selected, setSelected] = useState(null);
+    const [selectedId, setSelectedId] = useState(null);
     const [updateAll, setUpdateAll] = useState(false);
     
     // Продукты с полными данными из базы
@@ -295,20 +295,27 @@ const ReplaceModal = ({ ingredient, onConfirm, onClose }) => {
         { id: "almonds", name: "Миндаль", cal: 579, prot: 21, fat: 50, carbs: 22, category: "орехи" },
     ];
     
-    const filtered = localProducts.filter(r => r.name.toLowerCase().includes(search.toLowerCase()));
+    const filtered = localProducts.filter(p => p.name.toLowerCase().includes(search.toLowerCase()));
+    const selectedProduct = localProducts.find(p => p.id === selectedId);
+    
+    const handleReplaceClick = () => {
+        if (selectedProduct && ingredient) {
+            onConfirm(selectedProduct, updateAll, ingredient);
+        }
+    };
     
     return (
         <div class="fixed inset-0 z-50 flex items-end justify-center">
             <div class="absolute inset-0 bg-black/40" onClick={onClose}></div>
             <div class="relative bg-surface rounded-t-3xl w-full max-w-md p-6">
-                <h3 class="text-lg font-medium mb-2">Заменить: <span class="text-accent">{ingredient?.name}</span></h3>
+                <h3 class="text-lg font-medium mb-2">Заменить: <span class="text-accent">{ingredient?.name || '?'}</span></h3>
                 <p class="text-xs text-muted mb-4">Выберите продукт для замены</p>
                 
                 <input type="text" placeholder="Поиск..." value={search} onChange={(e) => setSearch(e.target.value)} class="w-full px-4 py-2 bg-primary/30 rounded-xl mb-4"/>
                 
                 <div class="space-y-2 max-h-48 overflow-y-auto mb-4">
-                    {filtered.map((p, idx) => (
-                        <div key={p.id || idx} onClick={() => setSelected(p)} className={"p-3 rounded-xl cursor-pointer " + (selected?.id === p.id ? 'bg-accent text-white' : 'bg-primary/30')}>
+                    {filtered.map((p) => (
+                        <div key={p.id} onClick={() => setSelectedId(p.id)} className={"p-3 rounded-xl cursor-pointer " + (selectedId === p.id ? 'bg-accent text-white' : 'bg-primary/30')}>
                             <div class="flex justify-between items-center">
                                 <div>
                                     <span class="font-medium">{p.name}</span>
@@ -330,7 +337,7 @@ const ReplaceModal = ({ ingredient, onConfirm, onClose }) => {
                 
                 <div class="flex gap-2">
                     <button onClick={onClose} class="flex-1 py-3 bg-gray-200 rounded-xl">Отмена</button>
-                    <button onClick={() => selected && onConfirm(selected, updateAll)} disabled={!selected} class="flex-1 py-3 bg-accent text-white rounded-xl disabled:opacity-50">
+                    <button onClick={handleReplaceClick} disabled={!selectedProduct} class="flex-1 py-3 bg-accent text-white rounded-xl disabled:opacity-50">
                         Заменить
                     </button>
                 </div>
@@ -397,7 +404,6 @@ const App = () => {
     const [modalPortions, setModalPortions] = useState(1);
     const [replaceModal, setReplaceModal] = useState(null);
     const [recipeVersion, setRecipeVersion] = useState(0);
-    const [replacedIngredient, setReplacedIngredient] = useState(null);  // Для трекинга замены
     
     useEffect(() => {
         const saved = localStorage.getItem('meal_plan');
@@ -429,14 +435,20 @@ const App = () => {
         });
     };
     
-    const handleReplace = (newProduct, updateAll) => {
-        if (!newProduct) return;
+    const handleReplace = (newProduct, updateAll, oldIngredient) => {
+        if (!newProduct || !oldIngredient) {
+            console.error('Ошибка: нет данных для замены', { newProduct, oldIngredient });
+            return;
+        }
         
-        const oldName = selectedMeal?.replacedIngredient || ingredient?.name;
+        const oldName = oldIngredient.name;
+        const recipeId = selectedMeal?.recipe_id || selectedMeal?.id || selectedMeal;
         
-        // 1. МГНОВЕННО обновляем локальный массив
-        if (DEMO_RECIPES[selectedMeal?.recipe_id]) {
-            const recipe = DEMO_RECIPES[selectedMeal.recipe_id];
+        console.log('🔄 Замена:', oldName, '→', newProduct.name, '| recipe_id:', recipeId);
+        
+        // 1. МГНОВЕННО обновляем локальный массив DEMO_RECIPES
+        if (DEMO_RECIPES[recipeId]) {
+            const recipe = DEMO_RECIPES[recipeId];
             recipe.ingredients = recipe.ingredients.map(ing => {
                 if (ing.name === oldName) {
                     return { 
@@ -448,22 +460,24 @@ const App = () => {
                 }
                 return ing;
             });
-            // Принудительный ререндер
+            // Принудительный ререндер RecipeModal
             setRecipeVersion(prev => prev + 1);
         }
         
-        // 2. Отправляем боту
+        // 2. Формируем JSON пакет для бота
         const packet = {
             type: 'substitute_ingredient',
-            original: oldName,
-            replacement: newProduct.name,
-            replacement_id: newProduct.id,
-            recipe_id: selectedMeal?.recipe_id || selectedMeal?.id,
+            recipe_id: recipeId,
+            old_name: oldName,
+            new_name: newProduct.name,
+            new_kcal: newProduct.cal,
+            new_id: newProduct.id,
             apply_to_all: updateAll,
             portions: modalPortions,
             timestamp: Date.now()
         };
         
+        // 3. Отправляем боту
         if (window.Telegram && window.Telegram.WebApp) {
             try {
                 window.Telegram.WebApp.sendData(JSON.stringify(packet));
@@ -473,12 +487,11 @@ const App = () => {
             }
         }
         
-        // 3. Закрываем модалку
+        // 4. Закрываем модалку
         setReplaceModal(null);
         
-        // 4. Показываем результат
-        const kbjuChange = newProduct.cal ? `(${oldName}: ?ккал → ${newProduct.name}: ${newProduct.cal}ккал)` : '';
-        alert(`✅ Заменено!\n${oldName} → ${newProduct.name}\n${updateAll ? '(ко всем 305 рецептам)' : ''}`);
+        // 5. Показываем результат
+        alert('✅ Заменено!\n' + oldName + ' → ' + newProduct.name + '\n' + (updateAll ? '(ко всем 305 рецептам)' : ''));
     };
     
     const changeMonth = (delta) => { const d = new Date(currentDate); d.setMonth(d.getMonth() + delta); setCurrentDate(d); };
@@ -497,7 +510,8 @@ const App = () => {
                         <button onClick={() => setView('settings')} class="p-3 bg-surface shadow rounded-full">⚙️</button>
                     </div>
                     {selectedDate && <DayDrawer date={selectedDate} meals={meals[selectedDate] || {}} onClose={() => setSelectedDate(null)} onMealClick={handleMealClick} onUpdatePortion={handleUpdatePortion} />}
-                    {selectedMeal && <RecipeModal key={recipeVersion} recipe={getRecipe()} portions={modalPortions} onClose={() => setSelectedMeal(null)} onPortionChange={setModalPortions} onReplace={(ing) => { setReplacedIngredient(ing); setReplaceModal(ing); }} />}
+                    {selectedMeal && <RecipeModal key={recipeVersion} recipe={getRecipe()} portions={modalPortions} onClose={() => setSelectedMeal(null)} onPortionChange={setModalPortions} onReplace={(ing) => setReplaceModal(ing)} />}
+                    {replaceModal && <ReplaceModal ingredient={replaceModal} onConfirm={handleReplace} onClose={() => setReplaceModal(null)} />}
                 </>
             )}
             {view === 'settings' && (
