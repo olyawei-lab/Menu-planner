@@ -259,33 +259,82 @@ const ReplaceModal = ({ ingredient, onConfirm, onClose }) => {
     const [search, setSearch] = useState('');
     const [selected, setSelected] = useState(null);
     const [updateAll, setUpdateAll] = useState(false);
-    const replacements = [
-        { name: "Тофу", cal: 75, prot: 8, fat: 4.5, carbs: 2 },
-        { name: "Брынза", cal: 260, prot: 22, fat: 19, carbs: 2 },
-        { name: "Фетакса", cal: 290, prot: 21, fat: 23, carbs: 4 },
-        { name: "Куриная грудка", cal: 120, prot: 22, fat: 2, carbs: 0 },
-        { name: "Индейка", cal: 130, prot: 29, fat: 2, carbs: 0 },
-        { name: "Семга", cal: 200, prot: 20, fat: 13, carbs: 0 },
+    const [products, setProducts] = useState([]);
+    const [loading, setLoading] = useState(false);
+    
+    // Расширенный справочник для локального поиска (т.к. API может быть недоступен)
+    const localProducts = [
+        { name: "Тофу", cal: 75, prot: 8, fat: 4.5, carbs: 2, category: "бобовые" },
+        { name: "Брынза", cal: 260, prot: 22, fat: 19, carbs: 2, category: "молочные" },
+        { name: "Фетакса", cal: 290, prot: 21, fat: 23, carbs: 4, category: "молочные" },
+        { name: "Куриная грудка", cal: 120, prot: 22, fat: 2, carbs: 0, category: "мясо" },
+        { name: "Индейка", cal: 104, prot: 24, fat: 0.5, carbs: 0, category: "мясо" },
+        { name: "Семга", cal: 208, prot: 20, fat: 13, carbs: 0, category: "рыба" },
+        { name: "Творог 5%", cal: 105, prot: 17, fat: 5, carbs: 3, category: "молочные" },
+        { name: "Творог 0%", cal: 71, prot: 15, fat: 0, carbs: 3.3, category: "молочные" },
+        { name: "Моцарелла", cal: 280, prot: 28, fat: 17, carbs: 3, category: "молочные" },
+        { name: "Пармезан", cal: 392, prot: 33, fat: 29, carbs: 4, category: "молочные" },
+        { name: "Яйцо куриное", cal: 157, prot: 12.7, fat: 10.6, carbs: 0.7, category: "яйца" },
+        { name: "Яичный белок", cal: 52, prot: 11, fat: 0.2, carbs: 0.7, category: "яйца" },
+        { name: "Гречка", cal: 310, prot: 12, fat: 3, carbs: 57, category: "крупы" },
+        { name: "Рис белый", cal: 340, prot: 8, fat: 1, carbs: 75, category: "крупы" },
+        { name: "Овсянка", cal: 340, prot: 13, fat: 6, carbs: 60, category: "крупы" },
+        { name: "Киноа", cal: 368, prot: 14, fat: 6, carbs: 64, category: "крупы" },
+        { name: "Авокадо", cal: 160, prot: 2, fat: 15, carbs: 9, category: "фрукты" },
+        { name: "Нут", cal: 378, prot: 20, fat: 6, carbs: 63, category: "бобовые" },
+        { name: "Фасоль", cal: 333, prot: 21, fat: 1, carbs: 60, category: "бобовые" },
+        { name: "Чечевица", cal: 330, prot: 24, fat: 1, carbs: 60, category: "бобовые" },
+        { name: "Креветки", cal: 99, prot: 24, fat: 0.3, carbs: 0.2, category: "морепродукты" },
+        { name: "Кальмар", cal: 100, prot: 21, fat: 1.5, carbs: 2, category: "морепродукты" },
+        { name: "Говядина постная", cal: 150, prot: 22, fat: 6, carbs: 0, category: "мясо" },
+        { name: "Свинина постная", cal: 143, prot: 21, fat: 6, carbs: 0, category: "мясо" },
+        { name: "Капуста", cal: 25, prot: 1.5, fat: 0.1, carbs: 5, category: "овощи" },
+        { name: "Брокколи", cal: 34, prot: 3, fat: 0.4, carbs: 7, category: "овощи" },
+        { name: "Шпинат", cal: 23, prot: 2.5, fat: 0.3, carbs: 3.5, category: "овощи" },
+        { name: "Салат", cal: 15, prot: 1.5, fat: 0.2, carbs: 2.5, category: "овощи" },
+        { name: "Оливки", cal: 360, prot: 2, fat: 35, carbs: 5, category: "овощи" },
+        { name: "Грецкие орехи", cal: 654, prot: 15, fat: 65, carbs: 14, category: "орехи" },
+        { name: "Миндаль", cal: 579, prot: 21, fat: 50, carbs: 22, category: "орехи" },
     ];
-    const filtered = replacements.filter(r => r.name.toLowerCase().includes(search.toLowerCase()));
+    
+    const filtered = localProducts.filter(r => r.name.toLowerCase().includes(search.toLowerCase()));
     
     return (
         <div class="fixed inset-0 z-50 flex items-end justify-center">
             <div class="absolute inset-0 bg-black/40" onClick={onClose}></div>
             <div class="relative bg-surface rounded-t-3xl w-full max-w-md p-6">
-                <h3 class="text-lg font-medium mb-4">Заменить: <span class="text-accent">{ingredient?.name}</span></h3>
+                <h3 class="text-lg font-medium mb-2">Заменить: <span class="text-accent">{ingredient?.name}</span></h3>
+                <p class="text-xs text-muted mb-4">Выберите продукт для замены</p>
+                
                 <input type="text" placeholder="Поиск..." value={search} onChange={(e) => setSearch(e.target.value)} class="w-full px-4 py-2 bg-primary/30 rounded-xl mb-4"/>
+                
                 <div class="space-y-2 max-h-48 overflow-y-auto mb-4">
                     {filtered.map((r, idx) => (
                         <div key={idx} onClick={() => setSelected(r)} className={"p-3 rounded-xl cursor-pointer " + (selected?.name === r.name ? 'bg-accent text-white' : 'bg-primary/30')}>
-                            <div class="flex justify-between"><span>{r.name}</span><span class="text-sm opacity-70">🔥 {r.cal} ккал</span></div>
+                            <div class="flex justify-between items-center">
+                                <div>
+                                    <span class="font-medium">{r.name}</span>
+                                    <span class="text-xs ml-2 opacity-70">({r.category})</span>
+                                </div>
+                                <div class="text-right">
+                                    <div class="text-sm font-medium">🔥 {r.cal} ккал</div>
+                                    <div class="text-xs opacity-70">б:{r.prot} ж:{r.fat} у:{r.carbs}</div>
+                                </div>
+                            </div>
                         </div>
                     ))}
                 </div>
-                <label class="flex items-center gap-2 mb-4"><input type="checkbox" checked={updateAll} onChange={(e) => setUpdateAll(e.target.checked)}/><span class="text-sm">Заменить во всех рецептах</span></label>
+                
+                <label class="flex items-center gap-2 mb-4">
+                    <input type="checkbox" checked={updateAll} onChange={(e) => setUpdateAll(e.target.checked)}/>
+                    <span class="text-sm">🔄 Применить ко всем рецептам (305 шт.)</span>
+                </label>
+                
                 <div class="flex gap-2">
                     <button onClick={onClose} class="flex-1 py-3 bg-gray-200 rounded-xl">Отмена</button>
-                    <button onClick={() => selected && onConfirm(selected, updateAll)} disabled={!selected} class="flex-1 py-3 bg-accent text-white rounded-xl disabled:opacity-50">Заменить</button>
+                    <button onClick={() => selected && onConfirm(selected, updateAll)} disabled={!selected} class="flex-1 py-3 bg-accent text-white rounded-xl disabled:opacity-50">
+                        Заменить
+                    </button>
                 </div>
             </div>
         </div>
@@ -382,7 +431,28 @@ const App = () => {
     };
     
     const handleReplace = (oldIng, newIng, updateAll) => {
-        // Обновляем DEMO_RECIPES
+        const packet = {
+            type: 'substitute_ingredient',
+            original: oldIng.name,
+            replacement: newIng.name,
+            recipe_id: selectedMeal.recipe_id || selectedMeal.id,
+            apply_to_all: updateAll,
+            portions: modalPortions,
+            timestamp: Date.now()
+        };
+        
+        // Отправляем боту через Telegram
+        if (window.Telegram && window.Telegram.WebApp) {
+            try {
+                const jsonStr = JSON.stringify(packet);
+                window.Telegram.WebApp.sendData(jsonStr);
+                console.log('📤 Отправлено боту:', packet);
+            } catch (e) {
+                console.error('Ошибка отправки боту:', e);
+            }
+        }
+        
+        // Также локально обновляем для быстрого отображения
         if (DEMO_RECIPES[selectedMeal.recipe_id]) {
             const recipe = DEMO_RECIPES[selectedMeal.recipe_id];
             recipe.ingredients = recipe.ingredients.map(ing => {
@@ -390,9 +460,11 @@ const App = () => {
                 return ing;
             });
         }
+        
         setReplaceModal(null);
-        // Принудительный ререндер RecipeModal
         setRecipeVersion(prev => prev + 1);
+        
+        alert(`🔄 Отправлено на сервер:\n${oldIng.name} → ${newIng.name}\n${updateAll ? '(ко всем рецептам)' : ''}`);
     };
     
     const changeMonth = (delta) => { const d = new Date(currentDate); d.setMonth(d.getMonth() + delta); setCurrentDate(d); };
