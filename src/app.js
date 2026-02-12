@@ -259,42 +259,40 @@ const ReplaceModal = ({ ingredient, onConfirm, onClose }) => {
     const [search, setSearch] = useState('');
     const [selected, setSelected] = useState(null);
     const [updateAll, setUpdateAll] = useState(false);
-    const [products, setProducts] = useState([]);
-    const [loading, setLoading] = useState(false);
     
-    // Расширенный справочник для локального поиска (т.к. API может быть недоступен)
+    // Продукты с полными данными из базы
     const localProducts = [
-        { name: "Тофу", cal: 75, prot: 8, fat: 4.5, carbs: 2, category: "бобовые" },
-        { name: "Брынза", cal: 260, prot: 22, fat: 19, carbs: 2, category: "молочные" },
-        { name: "Фетакса", cal: 290, prot: 21, fat: 23, carbs: 4, category: "молочные" },
-        { name: "Куриная грудка", cal: 120, prot: 22, fat: 2, carbs: 0, category: "мясо" },
-        { name: "Индейка", cal: 104, prot: 24, fat: 0.5, carbs: 0, category: "мясо" },
-        { name: "Семга", cal: 208, prot: 20, fat: 13, carbs: 0, category: "рыба" },
-        { name: "Творог 5%", cal: 105, prot: 17, fat: 5, carbs: 3, category: "молочные" },
-        { name: "Творог 0%", cal: 71, prot: 15, fat: 0, carbs: 3.3, category: "молочные" },
-        { name: "Моцарелла", cal: 280, prot: 28, fat: 17, carbs: 3, category: "молочные" },
-        { name: "Пармезан", cal: 392, prot: 33, fat: 29, carbs: 4, category: "молочные" },
-        { name: "Яйцо куриное", cal: 157, prot: 12.7, fat: 10.6, carbs: 0.7, category: "яйца" },
-        { name: "Яичный белок", cal: 52, prot: 11, fat: 0.2, carbs: 0.7, category: "яйца" },
-        { name: "Гречка", cal: 310, prot: 12, fat: 3, carbs: 57, category: "крупы" },
-        { name: "Рис белый", cal: 340, prot: 8, fat: 1, carbs: 75, category: "крупы" },
-        { name: "Овсянка", cal: 340, prot: 13, fat: 6, carbs: 60, category: "крупы" },
-        { name: "Киноа", cal: 368, prot: 14, fat: 6, carbs: 64, category: "крупы" },
-        { name: "Авокадо", cal: 160, prot: 2, fat: 15, carbs: 9, category: "фрукты" },
-        { name: "Нут", cal: 378, prot: 20, fat: 6, carbs: 63, category: "бобовые" },
-        { name: "Фасоль", cal: 333, prot: 21, fat: 1, carbs: 60, category: "бобовые" },
-        { name: "Чечевица", cal: 330, prot: 24, fat: 1, carbs: 60, category: "бобовые" },
-        { name: "Креветки", cal: 99, prot: 24, fat: 0.3, carbs: 0.2, category: "морепродукты" },
-        { name: "Кальмар", cal: 100, prot: 21, fat: 1.5, carbs: 2, category: "морепродукты" },
-        { name: "Говядина постная", cal: 150, prot: 22, fat: 6, carbs: 0, category: "мясо" },
-        { name: "Свинина постная", cal: 143, prot: 21, fat: 6, carbs: 0, category: "мясо" },
-        { name: "Капуста", cal: 25, prot: 1.5, fat: 0.1, carbs: 5, category: "овощи" },
-        { name: "Брокколи", cal: 34, prot: 3, fat: 0.4, carbs: 7, category: "овощи" },
-        { name: "Шпинат", cal: 23, prot: 2.5, fat: 0.3, carbs: 3.5, category: "овощи" },
-        { name: "Салат", cal: 15, prot: 1.5, fat: 0.2, carbs: 2.5, category: "овощи" },
-        { name: "Оливки", cal: 360, prot: 2, fat: 35, carbs: 5, category: "овощи" },
-        { name: "Грецкие орехи", cal: 654, prot: 15, fat: 65, carbs: 14, category: "орехи" },
-        { name: "Миндаль", cal: 579, prot: 21, fat: 50, carbs: 22, category: "орехи" },
+        { id: "tofu", name: "Тофу", cal: 75, prot: 8, fat: 4.5, carbs: 2, category: "бобовые" },
+        { id: "brynza", name: "Брынза", cal: 260, prot: 22, fat: 19, carbs: 2, category: "молочные" },
+        { id: "feta", name: "Фетакса", cal: 290, prot: 21, fat: 23, carbs: 4, category: "молочные" },
+        { id: "chicken_breast", name: "Куриная грудка", cal: 120, prot: 22, fat: 2, carbs: 0, category: "мясо" },
+        { id: "turkey", name: "Индейка", cal: 104, prot: 24, fat: 0.5, carbs: 0, category: "мясо" },
+        { id: "salmon", name: "Сёмга", cal: 208, prot: 20, fat: 13, carbs: 0, category: "рыба" },
+        { id: "curd_5", name: "Творог 5%", cal: 105, prot: 17, fat: 5, carbs: 3, category: "молочные" },
+        { id: "curd_0", name: "Творог 0%", cal: 71, prot: 15, fat: 0, carbs: 3.3, category: "молочные" },
+        { id: "mozzarella", name: "Моцарелла", cal: 280, prot: 28, fat: 17, carbs: 3, category: "молочные" },
+        { id: "parmesan", name: "Пармезан", cal: 392, prot: 33, fat: 29, carbs: 4, category: "молочные" },
+        { id: "egg", name: "Яйцо куриное", cal: 157, prot: 12.7, fat: 10.6, carbs: 0.7, category: "яйца" },
+        { id: "egg_white", name: "Яичный белок", cal: 52, prot: 11, fat: 0.2, carbs: 0.7, category: "яйца" },
+        { id: "buckwheat", name: "Гречка", cal: 310, prot: 12, fat: 3, carbs: 57, category: "крупы" },
+        { id: "rice", name: "Рис белый", cal: 340, prot: 8, fat: 1, carbs: 75, category: "крупы" },
+        { id: "oats", name: "Овсянка", cal: 340, prot: 13, fat: 6, carbs: 60, category: "крупы" },
+        { id: "quinoa", name: "Киноа", cal: 368, prot: 14, fat: 6, carbs: 64, category: "крупы" },
+        { id: "avocado", name: "Авокадо", cal: 160, prot: 2, fat: 15, carbs: 9, category: "фрукты" },
+        { id: "chickpeas", name: "Нут", cal: 378, prot: 20, fat: 6, carbs: 63, category: "бобовые" },
+        { id: "beans", name: "Фасоль", cal: 333, prot: 21, fat: 1, carbs: 60, category: "бобовые" },
+        { id: "lentils", name: "Чечевица", cal: 330, prot: 24, fat: 1, carbs: 60, category: "бобовые" },
+        { id: "shrimp", name: "Креветки", cal: 99, prot: 24, fat: 0.3, carbs: 0.2, category: "морепродукты" },
+        { id: "squid", name: "Кальмар", cal: 100, prot: 21, fat: 1.5, carbs: 2, category: "морепродукты" },
+        { id: "beef_lean", name: "Говядина постная", cal: 150, prot: 22, fat: 6, carbs: 0, category: "мясо" },
+        { id: "pork_lean", name: "Свинина постная", cal: 143, prot: 21, fat: 6, carbs: 0, category: "мясо" },
+        { id: "cabbage", name: "Капуста", cal: 25, prot: 1.5, fat: 0.1, carbs: 5, category: "овощи" },
+        { id: "broccoli", name: "Брокколи", cal: 34, prot: 3, fat: 0.4, carbs: 7, category: "овощи" },
+        { id: "spinach", name: "Шпинат", cal: 23, prot: 2.5, fat: 0.3, carbs: 3.5, category: "овощи" },
+        { id: "salad", name: "Салат", cal: 15, prot: 1.5, fat: 0.2, carbs: 2.5, category: "овощи" },
+        { id: "olives", name: "Оливки", cal: 360, prot: 2, fat: 35, carbs: 5, category: "овощи" },
+        { id: "walnuts", name: "Грецкие орехи", cal: 654, prot: 15, fat: 65, carbs: 14, category: "орехи" },
+        { id: "almonds", name: "Миндаль", cal: 579, prot: 21, fat: 50, carbs: 22, category: "орехи" },
     ];
     
     const filtered = localProducts.filter(r => r.name.toLowerCase().includes(search.toLowerCase()));
@@ -309,16 +307,16 @@ const ReplaceModal = ({ ingredient, onConfirm, onClose }) => {
                 <input type="text" placeholder="Поиск..." value={search} onChange={(e) => setSearch(e.target.value)} class="w-full px-4 py-2 bg-primary/30 rounded-xl mb-4"/>
                 
                 <div class="space-y-2 max-h-48 overflow-y-auto mb-4">
-                    {filtered.map((r, idx) => (
-                        <div key={idx} onClick={() => setSelected(r)} className={"p-3 rounded-xl cursor-pointer " + (selected?.name === r.name ? 'bg-accent text-white' : 'bg-primary/30')}>
+                    {filtered.map((p, idx) => (
+                        <div key={p.id || idx} onClick={() => setSelected(p)} className={"p-3 rounded-xl cursor-pointer " + (selected?.id === p.id ? 'bg-accent text-white' : 'bg-primary/30')}>
                             <div class="flex justify-between items-center">
                                 <div>
-                                    <span class="font-medium">{r.name}</span>
-                                    <span class="text-xs ml-2 opacity-70">({r.category})</span>
+                                    <span class="font-medium">{p.name}</span>
+                                    <span class="text-xs ml-2 opacity-70">({p.category})</span>
                                 </div>
                                 <div class="text-right">
-                                    <div class="text-sm font-medium">🔥 {r.cal} ккал</div>
-                                    <div class="text-xs opacity-70">б:{r.prot} ж:{r.fat} у:{r.carbs}</div>
+                                    <div class="text-sm font-medium">🔥 {p.cal} ккал</div>
+                                    <div class="text-xs opacity-70">б:{p.prot} ж:{p.fat} у:{p.carbs}</div>
                                 </div>
                             </div>
                         </div>
@@ -398,7 +396,8 @@ const App = () => {
     const [selectedMeal, setSelectedMeal] = useState(null);
     const [modalPortions, setModalPortions] = useState(1);
     const [replaceModal, setReplaceModal] = useState(null);
-    const [recipeVersion, setRecipeVersion] = useState(0);  // Для принудительного ререндера
+    const [recipeVersion, setRecipeVersion] = useState(0);
+    const [replacedIngredient, setReplacedIngredient] = useState(null);  // Для трекинга замены
     
     useEffect(() => {
         const saved = localStorage.getItem('meal_plan');
@@ -430,41 +429,56 @@ const App = () => {
         });
     };
     
-    const handleReplace = (oldIng, newIng, updateAll) => {
+    const handleReplace = (newProduct, updateAll) => {
+        if (!newProduct) return;
+        
+        const oldName = selectedMeal?.replacedIngredient || ingredient?.name;
+        
+        // 1. МГНОВЕННО обновляем локальный массив
+        if (DEMO_RECIPES[selectedMeal?.recipe_id]) {
+            const recipe = DEMO_RECIPES[selectedMeal.recipe_id];
+            recipe.ingredients = recipe.ingredients.map(ing => {
+                if (ing.name === oldName) {
+                    return { 
+                        ...ing, 
+                        name: newProduct.name,
+                        replacedFrom: oldName,
+                        replacedKBJU: { cal: newProduct.cal, prot: newProduct.prot, fat: newProduct.fat, carbs: newProduct.carbs }
+                    };
+                }
+                return ing;
+            });
+            // Принудительный ререндер
+            setRecipeVersion(prev => prev + 1);
+        }
+        
+        // 2. Отправляем боту
         const packet = {
             type: 'substitute_ingredient',
-            original: oldIng.name,
-            replacement: newIng.name,
-            recipe_id: selectedMeal.recipe_id || selectedMeal.id,
+            original: oldName,
+            replacement: newProduct.name,
+            replacement_id: newProduct.id,
+            recipe_id: selectedMeal?.recipe_id || selectedMeal?.id,
             apply_to_all: updateAll,
             portions: modalPortions,
             timestamp: Date.now()
         };
         
-        // Отправляем боту через Telegram
         if (window.Telegram && window.Telegram.WebApp) {
             try {
-                const jsonStr = JSON.stringify(packet);
-                window.Telegram.WebApp.sendData(jsonStr);
+                window.Telegram.WebApp.sendData(JSON.stringify(packet));
                 console.log('📤 Отправлено боту:', packet);
             } catch (e) {
                 console.error('Ошибка отправки боту:', e);
             }
         }
         
-        // Также локально обновляем для быстрого отображения
-        if (DEMO_RECIPES[selectedMeal.recipe_id]) {
-            const recipe = DEMO_RECIPES[selectedMeal.recipe_id];
-            recipe.ingredients = recipe.ingredients.map(ing => {
-                if (ing.name === oldIng.name) return { ...ing, name: newIng.name, replacedFrom: oldIng.name };
-                return ing;
-            });
-        }
-        
+        // 3. Закрываем модалку
         setReplaceModal(null);
-        setRecipeVersion(prev => prev + 1);
         
-        alert(`🔄 Отправлено на сервер:\n${oldIng.name} → ${newIng.name}\n${updateAll ? '(ко всем рецептам)' : ''}`);
+        // 4. Показываем результат
+        const kbjuChange = newProduct.cal ? `(${oldName}: ?ккал → ${newProduct.name}: ${newProduct.cal}ккал)` : '';
+        alert(`✅ Заменено!\n${oldName} → ${newProduct.name}\n${updateAll ? '(ко всем 305 рецептам)' : ''}`);
     };
     
     const changeMonth = (delta) => { const d = new Date(currentDate); d.setMonth(d.getMonth() + delta); setCurrentDate(d); };
@@ -483,7 +497,7 @@ const App = () => {
                         <button onClick={() => setView('settings')} class="p-3 bg-surface shadow rounded-full">⚙️</button>
                     </div>
                     {selectedDate && <DayDrawer date={selectedDate} meals={meals[selectedDate] || {}} onClose={() => setSelectedDate(null)} onMealClick={handleMealClick} onUpdatePortion={handleUpdatePortion} />}
-                    {selectedMeal && <RecipeModal key={recipeVersion} recipe={getRecipe()} portions={modalPortions} onClose={() => setSelectedMeal(null)} onPortionChange={setModalPortions} onReplace={(ing) => setReplaceModal(ing)} />}
+                    {selectedMeal && <RecipeModal key={recipeVersion} recipe={getRecipe()} portions={modalPortions} onClose={() => setSelectedMeal(null)} onPortionChange={setModalPortions} onReplace={(ing) => { setReplacedIngredient(ing); setReplaceModal(ing); }} />}
                 </>
             )}
             {view === 'settings' && (
