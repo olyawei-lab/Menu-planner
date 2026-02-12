@@ -381,16 +381,18 @@ const App = () => {
     };
     
     const handleReplace = (oldIng, newIng, updateAll) => {
+        // Обновляем DEMO_RECIPES
         if (DEMO_RECIPES[selectedMeal.recipe_id]) {
             const recipe = DEMO_RECIPES[selectedMeal.recipe_id];
             recipe.ingredients = recipe.ingredients.map(ing => {
-                if (ing.name === oldIng.name) return { ...ing, name: newIng.name };
+                if (ing.name === oldIng.name) return { ...ing, name: newIng.name, replacedFrom: oldIng.name };
                 return ing;
             });
+            // Обновляем selectedMeal, чтобы UI перерендерился
+            setSelectedMeal({ ...selectedMeal, recipe_id: selectedMeal.recipe_id });
         }
-        alert(`🔄 Заменили "${oldIng.name}" → "${newIng.name}"`);
         setReplaceModal(null);
-        setSelectedMeal(null);
+        // RecipeModal остаётся открытым, но перерендерится с новыми данными
     };
     
     const changeMonth = (delta) => { const d = new Date(currentDate); d.setMonth(d.getMonth() + delta); setCurrentDate(d); };
