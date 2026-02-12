@@ -1,0 +1,3265 @@
+{
+  "1": {
+    "id": 1,
+    "name": "Омлет из 1 яйца",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "2": {
+    "id": 2,
+    "name": "Цельнозерновой хлеб 50 гр.+ сыр твердый 35",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "3": {
+    "id": 3,
+    "name": "Крупа на выбор (греча/булгур/полба/геркулес/бурый рис/",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "4": {
+    "id": 4,
+    "name": "Курица без кожиприготовить удобным",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "5": {
+    "id": 5,
+    "name": "Салат овощной 200 гр. (зелень/огурцы/помидоры/перец/",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "6": {
+    "id": 6,
+    "name": "Яблоко 1 шт. средних размеров, можно заменить на",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "7": {
+    "id": 7,
+    "name": "Творог 4",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "8": {
+    "id": 8,
+    "name": "Хлеб зерновой 25 гр.+ сыр 35",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "9": {
+    "id": 9,
+    "name": "Вареное яйцо 1 шт.",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "10": {
+    "id": 10,
+    "name": "Овощи или листья салата по вкусу",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "11": {
+    "id": 11,
+    "name": "Крупа на выбор 60 гр. в сухом виде или 150 гр. в вареном виде",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "12": {
+    "id": 12,
+    "name": "Овощной салат (зелень/огурцы/помидоры/перец/белокочанная",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "13": {
+    "id": 13,
+    "name": "Куриная грудкапод соусом песто (можно",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "14": {
+    "id": 14,
+    "name": "Зефир 1 шт. /шоколад 15",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "15": {
+    "id": 15,
+    "name": "Мягкий творог 4%",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "16": {
+    "id": 16,
+    "name": "Яблоко или другой",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "17": {
+    "id": 17,
+    "name": "Овощной салат 200 гр. + заправка соевым соусом",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "18": {
+    "id": 18,
+    "name": "Курица как в обед 130 гр. в готовом виде (курицу можно",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "19": {
+    "id": 19,
+    "name": "Омлет из 2 яиц",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "20": {
+    "id": 20,
+    "name": "Хлеб цельнозерновой 20 гр. или хлебец + творожный сыр 25 гр.",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "21": {
+    "id": 21,
+    "name": "Крупа на выбор 60 гр. сухой или 140",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "22": {
+    "id": 22,
+    "name": "Семга или скумбрия 120 гр. в готовом виде (рыбу можно готовить",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "23": {
+    "id": 23,
+    "name": "Овощной салат 150 гр. + заправка йогуртом 1 ст.л.",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "24": {
+    "id": 24,
+    "name": "Батончик злаковый (без сахара, патоки, глюкозного сиропа",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "25": {
+    "id": 25,
+    "name": "Фрукт на выбор 1 шт.",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "26": {
+    "id": 26,
+    "name": "Салат из свеклы с черносливом 1 порция",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "27": {
+    "id": 27,
+    "name": "Рыба как в обед 130 гр. в готовом виде",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "28": {
+    "id": 28,
+    "name": "Геркулес монастырский или традиционный 30 гр. в сухом виде или",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "29": {
+    "id": 29,
+    "name": "Сыр твердый 45",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "30": {
+    "id": 30,
+    "name": "Гречневая лапша 50 гр. в сухом или 125 гр. в готовом виде (можно",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "31": {
+    "id": 31,
+    "name": "Оладьи из индейки 110 гр. в готовом виде (можно заменить на",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "32": {
+    "id": 32,
+    "name": "Салат овощной 150 гр. + заправка маслом ½ ст. л.",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "33": {
+    "id": 33,
+    "name": "Запеченный картофель 100 гр.",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "34": {
+    "id": 34,
+    "name": "Оладьи из индейки100 гр. или куриная грудка/рыба",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "35": {
+    "id": 35,
+    "name": "Овощи свежие 100 гр. + масло ½ ч.л.",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "36": {
+    "id": 36,
+    "name": "Каша на выбор 40 гр. в сухом виде или 100 гр. в готовом виде",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "37": {
+    "id": 37,
+    "name": "Орехи 20 гр. или арахисовая паста без сахара 1 ч.л. с горкой",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "38": {
+    "id": 38,
+    "name": "Сыр твердый 45%",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "39": {
+    "id": 39,
+    "name": "Печень или другие субпродукты 120 гр. (тушим с добавлением",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "40": {
+    "id": 40,
+    "name": "Крупа на выбор 55 гр. в сухом виде или 160 гр. в готовом виде",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "41": {
+    "id": 41,
+    "name": "Овощной салат 200 гр. + для заправки масло растительное 1 ч.л.",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "42": {
+    "id": 42,
+    "name": "Лаваш армянский 30 гр. + смазать творожным сыром 20 гр. +",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "43": {
+    "id": 43,
+    "name": "Фрукт на выбор 1 шт.",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "44": {
+    "id": 44,
+    "name": "Овощной салат 200 гр. + заправка йогуртом по вкусу",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "45": {
+    "id": 45,
+    "name": "Куриная грудка/рыба белая/морепродукты на выбор 100 гр.",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "46": {
+    "id": 46,
+    "name": "Омлет из 1 яйца",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "47": {
+    "id": 47,
+    "name": "Хлеб цз 30 гр. + сыр твердый 45",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "48": {
+    "id": 48,
+    "name": "Фунчоза с курицей 300 гр.",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "49": {
+    "id": 49,
+    "name": "Салат овощной 150 гр. с маслом растительным ½ ст.л.",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "50": {
+    "id": 50,
+    "name": "Салат греческий (200 гр. овощей",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "51": {
+    "id": 51,
+    "name": "Хлеб цз 20 гр.",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "52": {
+    "id": 52,
+    "name": "Хлеб зерновой 20 гр. + сыр творожный 30 гр. + семга/форель",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "53": {
+    "id": 53,
+    "name": "Каша на выбор 30 гр. в сухом виде или 100 гр. в готовом виде",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "54": {
+    "id": 54,
+    "name": "Крупа на выбор 60 гр. в сухом виде или 150 гр. в готовом виде",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "55": {
+    "id": 55,
+    "name": "Салат овощной 150 гр. + заправка маслом 1 ч.л.",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "56": {
+    "id": 56,
+    "name": "Куриные кармашки с брынзой 120 гр. в готовом виде",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "57": {
+    "id": 57,
+    "name": "Фрукт на выбор 1 шт.",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "58": {
+    "id": 58,
+    "name": "Орехи 10 гр.",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "59": {
+    "id": 59,
+    "name": "Ряженка 250 мл или йогурт 300 гр.",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "60": {
+    "id": 60,
+    "name": "Творог 5% 110 гр. + ягоды свежие 100 гр. или сухофрукты 20 гр.",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "61": {
+    "id": 61,
+    "name": "Омлет из 1 яйца или яйцо варёное",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "62": {
+    "id": 62,
+    "name": "Авокадо 30 гр.",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "63": {
+    "id": 63,
+    "name": "Индейка 110 гр. в готовом виде (индейку можно тушить",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "64": {
+    "id": 64,
+    "name": "Крупа по вкусу50 гр. в сухом виде",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "65": {
+    "id": 65,
+    "name": "Салат 250 гр. + масло 2 ч.л.",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "66": {
+    "id": 66,
+    "name": "Фрукт на выбор 1 шт.",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "67": {
+    "id": 67,
+    "name": "Ряженка 4% 200 мл или йогурт без сахара + 1 ст.л. отрубей или",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "68": {
+    "id": 68,
+    "name": "Вареное яйцо 1 шт.",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "69": {
+    "id": 69,
+    "name": "Хлеб зерновой 50 гр. + сыр творожный 30 гр. + авокадо 40 гр.",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "70": {
+    "id": 70,
+    "name": "Горсть зелени или овощи на выбор до 100 гр.",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "71": {
+    "id": 71,
+    "name": "Креветки вареные или другие морепродукты (можно белую",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "72": {
+    "id": 72,
+    "name": "Рис 60 гр. в сухом виде или 180 гр. в вареном",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "73": {
+    "id": 73,
+    "name": "Салат овощной 200 гр. + заправка маслом ½ ст.л.",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "74": {
+    "id": 74,
+    "name": "1 фрукт на выбор",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "75": {
+    "id": 75,
+    "name": "Овощной салат 150 гр. + заправка",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "76": {
+    "id": 76,
+    "name": "Шампиньоны 100 гр. (посолить.",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "77": {
+    "id": 77,
+    "name": "Морепродукты или курица",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "78": {
+    "id": 78,
+    "name": "Геркулес монастырский или традиционный 130 гр. в готовом",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "79": {
+    "id": 79,
+    "name": "Хлебец 1 шт. + сыр твердый 45",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "80": {
+    "id": 80,
+    "name": "Салат греческий (листья салата + огурцы + помидоры = всех",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "81": {
+    "id": 81,
+    "name": "Масло оливковое или подсолнечное в салат ½ ст.л.",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "82": {
+    "id": 82,
+    "name": "Макароны из твердых сортов 130",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "83": {
+    "id": 83,
+    "name": "Куриные голени100 гр. (вес готовых без учета костей,",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "84": {
+    "id": 84,
+    "name": "Ряженка 3,2%",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "85": {
+    "id": 85,
+    "name": "Фрукт 1 шт. на выбор или ягоды сезонные 100 гр.",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "86": {
+    "id": 86,
+    "name": "Куриная грудка отварная или тушеная 100 гр.",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "87": {
+    "id": 87,
+    "name": "Овощи свежие 200 гр. + йогуртовая заправка 1 ст.л. или соевым",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "88": {
+    "id": 88,
+    "name": "Греча или булгур или киноа 50 гр. в сухом виде; 120",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "89": {
+    "id": 89,
+    "name": "Куриные тефтели в томатной пасте 120 гр.",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "90": {
+    "id": 90,
+    "name": "Салат овощной 150 гр. + заправка соевым соусом или йогуртом",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "91": {
+    "id": 91,
+    "name": "Тефтели как в обед 100 гр.",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "92": {
+    "id": 92,
+    "name": "Салат овощной 150 гр. или овощи тушеные + масло растит 1 ст.л.",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "93": {
+    "id": 93,
+    "name": "Хлеб цз 20 гр. или хлебец 1 шт.",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "94": {
+    "id": 94,
+    "name": "Макароны из твердых сортов 50 гр. в сухом виде или 140 гр.",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "95": {
+    "id": 95,
+    "name": "Суфле куриное 120 гр. (можно заменить на курицу/рыбу/постную",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "96": {
+    "id": 96,
+    "name": "Салат из свеклы с фетаксой 1 порция",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "97": {
+    "id": 97,
+    "name": "Салат овощной 150 гр. + заправка йогуртом 1 ст.л.",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "98": {
+    "id": 98,
+    "name": "Суфле как в обед 150 гр.",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "99": {
+    "id": 99,
+    "name": "Каша на выбор 30 гр. сухом виде или 80 гр. в вареном виде +",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "100": {
+    "id": 100,
+    "name": "Вареное яйцо 1 шт.",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "101": {
+    "id": 101,
+    "name": "Куриный кармашек с гречкой 200 гр. (можно менять рецепт на",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "102": {
+    "id": 102,
+    "name": "Овощи свежие 150 гр.",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "103": {
+    "id": 103,
+    "name": "Два фрукта на выбор+ орехи на выбор 10 гр.",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "104": {
+    "id": 104,
+    "name": "Макароны из полбы или полба 50 гр. в сухом виде или",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "105": {
+    "id": 105,
+    "name": "Салат из свежих овощей 200 гр. + заправка маслом 1 ст.л.",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "106": {
+    "id": 106,
+    "name": "Морепродукты 160 гр.или меняем на куриное филе",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "107": {
+    "id": 107,
+    "name": "Фрукт на выбор",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "108": {
+    "id": 108,
+    "name": "Куриное филе или индейка120 гр.",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "109": {
+    "id": 109,
+    "name": "Овощи на выбор свежие 150 гр. с маслом ½ ст.л.",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "110": {
+    "id": 110,
+    "name": "Хлеб зерновой 40 гр. + паштет из куриной печени 40 гр. или",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "111": {
+    "id": 111,
+    "name": "Яйцо вареное 1 шт.",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "112": {
+    "id": 112,
+    "name": "Листья свежие по вкусу или свежие овощи до 100 гр.",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "113": {
+    "id": 113,
+    "name": "Куриная отбивная 100 гр. в готовом виде (отбить, обжарить",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "114": {
+    "id": 114,
+    "name": "Крупа на выбор 50 гр. в сухом виде или 140",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "115": {
+    "id": 115,
+    "name": "Овощной салат (огурцы 120 гр. + айсберг или шпинат по вкусу +",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "116": {
+    "id": 116,
+    "name": "Батончик злаковый 45 гр. на 160",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "117": {
+    "id": 117,
+    "name": "Фрукт на выбор 1 шт.",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "118": {
+    "id": 118,
+    "name": "Каша на выбор 50 гр. в сухом виде или 140",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "119": {
+    "id": 119,
+    "name": "Сыр моцарелла 20 гр.",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "120": {
+    "id": 120,
+    "name": "Тефтели в сметанном соусе на 140 гр.",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "121": {
+    "id": 121,
+    "name": "Овощи тушеные на выбор (кабачки/ цветная/ брокколи /",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "122": {
+    "id": 122,
+    "name": "Хлеб 65 гр.",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "123": {
+    "id": 123,
+    "name": "Средний фрукт 1 шт.",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "124": {
+    "id": 124,
+    "name": "Салат овощной 200 гр. + масло ½ ст.л.",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "125": {
+    "id": 125,
+    "name": "Зразы с яйцом и зеленым луком 120 гр. (можно заменить на",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "126": {
+    "id": 126,
+    "name": "Омлет из 1 яйца + 70",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "127": {
+    "id": 127,
+    "name": "Свежие овощи на выбор 100 гр.",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "128": {
+    "id": 128,
+    "name": "Хлеб зерновой 50 гр.",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "129": {
+    "id": 129,
+    "name": "Семга или скумбрия 120 гр. в готовом виде, рыбу готовим на",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "130": {
+    "id": 130,
+    "name": "Салат из моркови тертой 140 гр. с маслом ½ ст.л. и чесноком по",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "131": {
+    "id": 131,
+    "name": "Гречневая лапша 45 гр. в сухом виде или 120",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "132": {
+    "id": 132,
+    "name": "Батончик 45 гр.",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "133": {
+    "id": 133,
+    "name": "Фрукт на выбор 1 шт.",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "134": {
+    "id": 134,
+    "name": "Крупа на выбор 30 гр. варим на воде (в конце варки молоко по",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "135": {
+    "id": 135,
+    "name": "Конвертик с сыром 1 порция (можно заменить рецепт на хлебец",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "136": {
+    "id": 136,
+    "name": "Куриные крылышки или ножки без кожи 110 гр. в готовом виде",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "137": {
+    "id": 137,
+    "name": "Чечевица или нут 40 гр. в сухом виде или 100 гр. в готовом виде",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "138": {
+    "id": 138,
+    "name": "Салат из свеклы 160 гр.",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "139": {
+    "id": 139,
+    "name": "Хлеб зерновой 60 гр.",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "140": {
+    "id": 140,
+    "name": "Вареное яйцо 1 шт.",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "141": {
+    "id": 141,
+    "name": "Сыр тверды 45",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "142": {
+    "id": 142,
+    "name": "Листья салата горсть",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "143": {
+    "id": 143,
+    "name": "Курица или индейка без кожиили",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "144": {
+    "id": 144,
+    "name": "Киноа 60 гр. в сухом виде или 150 гр. в готовом виде (можно",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "145": {
+    "id": 145,
+    "name": "Овощной салат 200 гр. + ½ ст.л. масла",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "146": {
+    "id": 146,
+    "name": "Батончик протеиновый 40",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "147": {
+    "id": 147,
+    "name": "Банан 1 шт.",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "148": {
+    "id": 148,
+    "name": "Салат овощной 100 гр., заправка йогуртом без добавок 1",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "149": {
+    "id": 149,
+    "name": "Курицу/индейку 100 гр. вес готовой или рыба белая 100",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "150": {
+    "id": 150,
+    "name": "Греческий салат овощи 100 гр. + фетакса 20 гр. + маслины или",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "151": {
+    "id": 151,
+    "name": "Греча/булгур на выбор 65 гр. в сухом виде или 145",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "152": {
+    "id": 152,
+    "name": "Куриная грудка в соусе терияки 100 гр. в готовом виде",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "153": {
+    "id": 153,
+    "name": "Хлебец 1 шт. + сыр",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "154": {
+    "id": 154,
+    "name": "Фрукт на выбор",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "155": {
+    "id": 155,
+    "name": "Куриные кармашки с брынзой 100 гр. в готовом виде",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "156": {
+    "id": 156,
+    "name": "Овощи свежие 150",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "157": {
+    "id": 157,
+    "name": "Авокадо 40 гр. + хлеб цз 40 гр.",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "158": {
+    "id": 158,
+    "name": "Омлет из 1 яйца без масла с помидорами и зеленью по вкусу",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "159": {
+    "id": 159,
+    "name": "Зелень по вкусу",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "160": {
+    "id": 160,
+    "name": "Киноа или булгур 65 гр. в сухом виде или 145",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "161": {
+    "id": 161,
+    "name": "Говядина 70 гр. в готовом виде (готовим, запекая или тушим",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "162": {
+    "id": 162,
+    "name": "Салат овощной 150 гр. с заправкой соевым соусом по вкусу",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "163": {
+    "id": 163,
+    "name": "Фрукты средние 2 шт. на выбор",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "164": {
+    "id": 164,
+    "name": "Хлебец 2 шт. + сыр творожный 20",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "165": {
+    "id": 165,
+    "name": "Овощи до 100 гр./можно зелень по вкусу горсть",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "166": {
+    "id": 166,
+    "name": "Яйцо варёное 1 шт.",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "167": {
+    "id": 167,
+    "name": "Спагетти50 гр. в сухом виде или 120 гр.",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "168": {
+    "id": 168,
+    "name": "Овощной салат 200 гр. + ½ ст.л. масла",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "169": {
+    "id": 169,
+    "name": "Злаковый батончик 45 гр.",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "170": {
+    "id": 170,
+    "name": "Ягоды или фрукт на выбор",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "171": {
+    "id": 171,
+    "name": "Филе индейки в соевом соусе с апельсинами 150 гр.",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "172": {
+    "id": 172,
+    "name": "Овощной салат 150 гр. + ½ ст.л. масла",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "173": {
+    "id": 173,
+    "name": "Блинчики из ц/з муки 1 порция (берем муку любую, главное",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "174": {
+    "id": 174,
+    "name": "Для топпинга 2 ч.л. джема без сахара",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "175": {
+    "id": 175,
+    "name": "Зразы с яйцом и зеленым луком 120 гр. (можно заменить на рыбу",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "176": {
+    "id": 176,
+    "name": "Картофель80 гр.",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "177": {
+    "id": 177,
+    "name": "Салат 150 гр. + заправка йогуртом или соевым соусом",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "178": {
+    "id": 178,
+    "name": "Фрукт средний 1 шт.",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "179": {
+    "id": 179,
+    "name": "Зраза как в обед или меняем на морепродукты 130 гр. (вес",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "180": {
+    "id": 180,
+    "name": "Овощной салат 200 гр. + ½ ст.л. масла",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "181": {
+    "id": 181,
+    "name": "Йогурт нежирный или творог 4",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "182": {
+    "id": 182,
+    "name": "Яйцо вареное 1 шт. или омлет из 1 яйца без масла (зелень по",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "183": {
+    "id": 183,
+    "name": "Салат овощной 150 гр. с маслом растит ½ ст.л.",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "184": {
+    "id": 184,
+    "name": "Гречневая лапша 45 гр. в сухом виде или 100",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "185": {
+    "id": 185,
+    "name": "Лосось или форель или скумбрия на выбор 120 гр. в готовом виде",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "186": {
+    "id": 186,
+    "name": "Фрукт 1 шт. на выбор",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "187": {
+    "id": 187,
+    "name": "Овощной салат 200 гр. + моцарелла в салат 20 гр. + заправка",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "188": {
+    "id": 188,
+    "name": "Минтай в омлете с мексиканской смесью 230 гр.",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "189": {
+    "id": 189,
+    "name": "Омлет из 2 яиц + сыр твердый 20 гр. в омлет",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "190": {
+    "id": 190,
+    "name": "Листья салата горсть",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "191": {
+    "id": 191,
+    "name": "Хлеб цз 35 гр.",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "192": {
+    "id": 192,
+    "name": "Буженина из индейки 140 гр.",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "193": {
+    "id": 193,
+    "name": "Рис 45 гр. в сухом виде 130",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "194": {
+    "id": 194,
+    "name": "Салат овощной 150 гр.",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "195": {
+    "id": 195,
+    "name": "Масло растительное ½ ст.л.",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "196": {
+    "id": 196,
+    "name": "Фрукт на выбор 1 шт.",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "197": {
+    "id": 197,
+    "name": "Овощи тушеные 200 гр.",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "198": {
+    "id": 198,
+    "name": "Семга или скумбрия или лосось 120 гр.",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "199": {
+    "id": 199,
+    "name": "Сыр сулугуни или моцарелла или творожный сыр 30 гр. + хлеб",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "200": {
+    "id": 200,
+    "name": "Авокадо 55 гр.",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "201": {
+    "id": 201,
+    "name": "Греча/бурый рис на выбор 55 гр. в сухом виде или 150 гр.",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "202": {
+    "id": 202,
+    "name": "Рыба на выборна выбор 140 гр.",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "203": {
+    "id": 203,
+    "name": "Овощной салат 150 гр. + ½ ст.л. масла",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "204": {
+    "id": 204,
+    "name": "Фрукт 1 шт. на выбор",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "205": {
+    "id": 205,
+    "name": "Рыбные котлеты из тунца 160 гр. (можно заменить на рыбу белую",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "206": {
+    "id": 206,
+    "name": "Овощи 200 гр. без масла",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "207": {
+    "id": 207,
+    "name": "Каша на выбор 30 гр. в сухом виде или 70",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "208": {
+    "id": 208,
+    "name": "Яйцо вареное 1 шт.",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "209": {
+    "id": 209,
+    "name": "Греческий салат+ фетакса 20 гр. + масло 1 ч.л.",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "210": {
+    "id": 210,
+    "name": "Рисовая лапша 50 гр. в сухом виде или 130",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "211": {
+    "id": 211,
+    "name": "Морепродукты 130 гр. в готовом виде (морепродукты отварить",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "212": {
+    "id": 212,
+    "name": "1 фрукт на выбор",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "213": {
+    "id": 213,
+    "name": "Салат 200 гр. + масло ½ ст.л.",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "214": {
+    "id": 214,
+    "name": "Курица 120 гр. в готовом виде (запекать в пакете для запекания",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "215": {
+    "id": 215,
+    "name": "Натуральный йогурт без добавления сахара 150 гр.",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "216": {
+    "id": 216,
+    "name": "Сыр творожный 25 гр. + Хлеб цельнозерновой 25 гр. или хлебец",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "217": {
+    "id": 217,
+    "name": "Яйцо вареное",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "218": {
+    "id": 218,
+    "name": "Рис бурый или дикий на выбор 50 гр. в сухом виде или",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "219": {
+    "id": 219,
+    "name": "Салат 250 гр. + ½ ст.л. масла",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "220": {
+    "id": 220,
+    "name": "Рыба на выбор140 гр. Рыбу запекаем",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "221": {
+    "id": 221,
+    "name": "1 фрукт на выбор",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "222": {
+    "id": 222,
+    "name": "Печеный картофель в мундире 80 гр.",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "223": {
+    "id": 223,
+    "name": "Мясо кролик/курица на выбор 120 гр. в готовом виде",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "224": {
+    "id": 224,
+    "name": "Овощи 200 гр. с йогуртовой заправкой",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "225": {
+    "id": 225,
+    "name": "Йогурт нежирный без добавок ~2% 170 гр.",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "226": {
+    "id": 226,
+    "name": "Омлет из 2 белков и 1 желтка с овощами до 100 гр. +",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "227": {
+    "id": 227,
+    "name": "Греча/полба/киноа45 гр. в сухом",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "228": {
+    "id": 228,
+    "name": "Куриное филе в соевом соусе 120 гр. (куриное филе перед",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "229": {
+    "id": 229,
+    "name": "1 средний фрукт на выбор",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "230": {
+    "id": 230,
+    "name": "Рулет из индейки с кабачком 250 гр.",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "231": {
+    "id": 231,
+    "name": "Овощной салат 200 гр. + ½ ст.л. масла",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "232": {
+    "id": 232,
+    "name": "Творог 4% 120 гр. + ягоды или абрикосы на выбор 80 гр. в творог",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "233": {
+    "id": 233,
+    "name": "Хлеб зерновой 25 гр. + творожный сыр 30",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "234": {
+    "id": 234,
+    "name": "Макароны твердых сортов 45 гр. в сухом виде или 100",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "235": {
+    "id": 235,
+    "name": "Салат овощной 200 гр. + ½ ст.л. масла",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "236": {
+    "id": 236,
+    "name": "Говядина постная отварная 90 гр. или курица/рыба",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "237": {
+    "id": 237,
+    "name": "Йогурт греческий 2% 130",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "238": {
+    "id": 238,
+    "name": "1 средний фрукт на выбор",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "239": {
+    "id": 239,
+    "name": "Кабачокзапеченный с сыром 220",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "240": {
+    "id": 240,
+    "name": "Куриная отбивная 80 гр. в готовом виде (филе грудки отбить,",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "241": {
+    "id": 241,
+    "name": "Цельнозерновой хлеб 50 гр.",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "242": {
+    "id": 242,
+    "name": "Крупа на выбор",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "243": {
+    "id": 243,
+    "name": "Курица без кожи",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "244": {
+    "id": 244,
+    "name": "Салат овощной 200 гр.",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "245": {
+    "id": 245,
+    "name": "Яблоко 1 шт. средних размеров",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "246": {
+    "id": 246,
+    "name": "Хлеб зерновой 25 гр.",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "247": {
+    "id": 247,
+    "name": "Овощной салат",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "248": {
+    "id": 248,
+    "name": "Куриная грудка",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "249": {
+    "id": 249,
+    "name": "Курица как в обед 130 гр. в готовом виде",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "250": {
+    "id": 250,
+    "name": "Семга или скумбрия 120 гр. в готовом виде",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "251": {
+    "id": 251,
+    "name": "Батончик злаковый",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "252": {
+    "id": 252,
+    "name": "Гречневая лапша 50 гр. в сухом или 125 гр. в готовом виде",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "253": {
+    "id": 253,
+    "name": "Оладьи из индейки 110 гр. в готовом виде",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "254": {
+    "id": 254,
+    "name": "Оладьи из индейки",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "255": {
+    "id": 255,
+    "name": "Печень или другие субпродукты 120 гр.",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "256": {
+    "id": 256,
+    "name": "Салат греческий",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "257": {
+    "id": 257,
+    "name": "Индейка 110 гр. в готовом виде",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "258": {
+    "id": 258,
+    "name": "Крупа по вкусу",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "259": {
+    "id": 259,
+    "name": "Креветки вареные или другие морепродукты",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "260": {
+    "id": 260,
+    "name": "Шампиньоны 100 гр.",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "261": {
+    "id": 261,
+    "name": "Куриные голени",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "262": {
+    "id": 262,
+    "name": "Ряженка 3",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "263": {
+    "id": 263,
+    "name": "Суфле куриное 120 гр.",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "264": {
+    "id": 264,
+    "name": "Куриный кармашек с гречкой 200 гр.",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "265": {
+    "id": 265,
+    "name": "Два фрукта на выбор",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "266": {
+    "id": 266,
+    "name": "Морепродукты 160 гр.",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "267": {
+    "id": 267,
+    "name": "Куриное филе или индейка",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "268": {
+    "id": 268,
+    "name": "Куриная отбивная 100 гр. в готовом виде",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "269": {
+    "id": 269,
+    "name": "Овощи тушеные на выбор",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "270": {
+    "id": 270,
+    "name": "Зразы с яйцом и зеленым луком 120 гр.",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "271": {
+    "id": 271,
+    "name": "Крупа на выбор 30 гр. варим на воде",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "272": {
+    "id": 272,
+    "name": "Конвертик с сыром 1 порция",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "273": {
+    "id": 273,
+    "name": "Курица или индейка без кожи",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "274": {
+    "id": 274,
+    "name": "Киноа 60 гр. в сухом виде или 150 гр. в готовом виде",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "275": {
+    "id": 275,
+    "name": "Салат овощной 100 гр.",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "276": {
+    "id": 276,
+    "name": "Говядина 70 гр. в готовом виде",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "277": {
+    "id": 277,
+    "name": "Спагетти",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "278": {
+    "id": 278,
+    "name": "Блинчики из ц/з муки 1 порция",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "279": {
+    "id": 279,
+    "name": "Картофель",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "280": {
+    "id": 280,
+    "name": "Зраза как в обед или меняем на морепродукты 130 гр.",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "281": {
+    "id": 281,
+    "name": "Яйцо вареное 1 шт. или омлет из 1 яйца без масла",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "282": {
+    "id": 282,
+    "name": "Рыба на выбор",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "283": {
+    "id": 283,
+    "name": "Рыбные котлеты из тунца 160 гр.",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "284": {
+    "id": 284,
+    "name": "Греческий салат",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "285": {
+    "id": 285,
+    "name": "Морепродукты 130 гр. в готовом виде",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "286": {
+    "id": 286,
+    "name": "Курица 120 гр. в готовом виде",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "287": {
+    "id": 287,
+    "name": "Греча/полба/киноа",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "288": {
+    "id": 288,
+    "name": "Куриное филе в соевом соусе 120 гр.",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "289": {
+    "id": 289,
+    "name": "Кабачок",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "290": {
+    "id": 290,
+    "name": "Куриная отбивная 80 гр. в готовом виде",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "291": {
+    "id": 291,
+    "name": "Цельнозерновой хлеб 50 гр. + сыр твердый 35",
+    "calories": 270.0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "292": {
+    "id": 292,
+    "name": "Хлеб зерновой 25 гр. + сыр 35",
+    "calories": 227.0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "293": {
+    "id": 293,
+    "name": "Куриная грудка под соусом песто (можно",
+    "calories": 227.0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "294": {
+    "id": 294,
+    "name": "Оладьи из индейки 100 гр. или куриная грудка/рыба",
+    "calories": 290.0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "295": {
+    "id": 295,
+    "name": "Крупа по вкусу 50 гр. в сухом виде",
+    "calories": 311.0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "296": {
+    "id": 296,
+    "name": "Куриные голени 100 гр. (вес готовых без учета костей,",
+    "calories": 227.0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "297": {
+    "id": 297,
+    "name": "Два фрукта на выбор + орехи на выбор",
+    "calories": 216.0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "298": {
+    "id": 298,
+    "name": "Морепродукты 160 гр. или меняем на куриное филе",
+    "calories": 264.0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "299": {
+    "id": 299,
+    "name": "Курица или индейка без кожи или",
+    "calories": 265.0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "300": {
+    "id": 300,
+    "name": "Спагетти 50 гр. в сухом виде или",
+    "calories": 289.0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "301": {
+    "id": 301,
+    "name": "Рыба на выбор на выбор",
+    "calories": 260.0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "302": {
+    "id": 302,
+    "name": "Греческий салат + фетакса 20 гр. + масло 1 ч.л.",
+    "calories": 209.0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "303": {
+    "id": 303,
+    "name": "Рыба на выбор 140 гр. Рыбу запекаем",
+    "calories": 271.0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "304": {
+    "id": 304,
+    "name": "Греча/полба/киноа 45 гр. в сухом",
+    "calories": 304.0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "305": {
+    "id": 305,
+    "name": "Кабачок запеченный с сыром 220",
+    "calories": 286.0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "306": {
+    "id": 306,
+    "name": "Омлет из 1 яйца (можно с молоком до 50 мл или без молока)",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "307": {
+    "id": 307,
+    "name": "Цельнозерновой хлеб 50 гр. (или хлебцы) + сыр твердый 35–50%",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "308": {
+    "id": 308,
+    "name": "Курица без кожи (бедро или голень) приготовить удобным",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "309": {
+    "id": 309,
+    "name": "Яблоко 1 шт. средних размеров (100–130 гр.), можно заменить на",
+    "calories": 50.0,
+    "protein": 1.0,
+    "fat": 0.3,
+    "carbs": 10.0,
+    "ingredients": [
+      {
+        "name": "фрукт или ягоды сезонные",
+        "amount": 100.0,
+        "unit": "г",
+        "optional": false
+      }
+    ]
+  },
+  "310": {
+    "id": 310,
+    "name": "Творог 4–5% 140 гр. с сухофруктами 25 гр.",
+    "calories": 30.0,
+    "protein": 2.0,
+    "fat": 0.4,
+    "carbs": 4.0,
+    "ingredients": [
+      {
+        "name": "Овощной салат",
+        "amount": 200.0,
+        "unit": "г",
+        "optional": false
+      }
+    ]
+  },
+  "311": {
+    "id": 311,
+    "name": "Хлеб зерновой 25 гр. (или хлебцы 1–2 шт.) + сыр 35–50% 30 гр.",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "312": {
+    "id": 312,
+    "name": "Вареное яйцо 1 шт. (можно омлет или яичница)",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "313": {
+    "id": 313,
+    "name": "Куриная грудка (или меняем на бедро) под соусом песто (можно",
+    "calories": 56.0,
+    "protein": 5.6,
+    "fat": 3.4,
+    "carbs": 0.6,
+    "ingredients": [
+      {
+        "name": "моцарелла",
+        "amount": 20.0,
+        "unit": "г",
+        "optional": false
+      }
+    ]
+  },
+  "314": {
+    "id": 314,
+    "name": "Зефир 1 шт. /шоколад 15–20 гр./сухофрукты 20–25 гр. (можно",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "315": {
+    "id": 315,
+    "name": "Сыр твердый 45–50% 20 гр. + хлебец или хлеб 20–25 гр.",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "316": {
+    "id": 316,
+    "name": "Оладьи из индейки (как в обед) 100 гр. или куриная грудка/рыба",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "317": {
+    "id": 317,
+    "name": "Сыр твердый 45% – 25 гр.",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "318": {
+    "id": 318,
+    "name": "Крупа по вкусу (греча/рис/булгур) 50 гр. в сухом виде",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "319": {
+    "id": 319,
+    "name": "Хлебец 1 шт. + сыр твердый 45–50% 25 гр. или сыр моцарелла",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": [
+      {
+        "name": "для бутербродов",
+        "amount": 30.0,
+        "unit": "г",
+        "optional": false
+      }
+    ]
+  },
+  "320": {
+    "id": 320,
+    "name": "Куриные голени (без кожи) 100 гр. (вес готовых без учета костей,",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "321": {
+    "id": 321,
+    "name": "Ряженка 3,2% – 250 мл (можно менять на йогурт без сахара/",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "322": {
+    "id": 322,
+    "name": "Суфле как в обед 150 гр. (или курица 120–150 гр. в готовом виде)",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "323": {
+    "id": 323,
+    "name": "Два фрукта на выбор (яблоко/груша/ягоды) + орехи на выбор 10 гр.",
+    "calories": 182.6,
+    "protein": 5.6,
+    "fat": 8.7,
+    "carbs": 21.7,
+    "ingredients": [
+      {
+        "name": "Хлеб зерновой",
+        "amount": 20.0,
+        "unit": "г",
+        "optional": false
+      },
+      {
+        "name": "салат овощной",
+        "amount": 200.0,
+        "unit": "г",
+        "optional": false
+      },
+      {
+        "name": "авокадо",
+        "amount": 50.0,
+        "unit": "г",
+        "optional": false
+      },
+      {
+        "name": "сладкий перец",
+        "amount": 70.0,
+        "unit": "г",
+        "optional": false
+      },
+      {
+        "name": "любой крупы",
+        "amount": 130.0,
+        "unit": "г",
+        "optional": false
+      },
+      {
+        "name": "яйцо",
+        "amount": 1.0,
+        "unit": "шт",
+        "optional": false
+      }
+    ]
+  },
+  "324": {
+    "id": 324,
+    "name": "Морепродукты 160 гр. (вес готовых) или меняем на куриное филе",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "325": {
+    "id": 325,
+    "name": "Фрукт на выбор (персик /груша/яблоко/киви 2 шт.)",
+    "calories": 145.0,
+    "protein": 1.5,
+    "fat": 0.2,
+    "carbs": 35.0,
+    "ingredients": [
+      {
+        "name": "Сухофрукты на выбор",
+        "amount": 50.0,
+        "unit": "г",
+        "optional": false
+      }
+    ]
+  },
+  "326": {
+    "id": 326,
+    "name": "Куриное филе или индейка (можно в виде котлет) 120 гр.",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "327": {
+    "id": 327,
+    "name": "Яйцо вареное 1 шт. (или омлет)",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "328": {
+    "id": 328,
+    "name": "Средний фрукт 1 шт. (банан)",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "329": {
+    "id": 329,
+    "name": "Омлет из 1 яйца + 70–80 мл 2–3,2% молока + зелень и соль по",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "330": {
+    "id": 330,
+    "name": "Батончик 45 гр. (на 160–190 ккал и составом без сахара)",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "331": {
+    "id": 331,
+    "name": "Вареное яйцо 1 шт. (или омлет с овощами до 100 гр.)",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "332": {
+    "id": 332,
+    "name": "Сыр тверды 45–50% 20 гр.",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "333": {
+    "id": 333,
+    "name": "Курица или индейка без кожи (110 гр. – вес готовой) или",
+    "calories": 225.0,
+    "protein": 23.4,
+    "fat": 13.5,
+    "carbs": 0,
+    "ingredients": [
+      {
+        "name": "говядина",
+        "amount": 90.0,
+        "unit": "г",
+        "optional": false
+      }
+    ]
+  },
+  "334": {
+    "id": 334,
+    "name": "Батончик протеиновый 40–50 гр. (углеводов в составе не более",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "335": {
+    "id": 335,
+    "name": "Хлебец 1 шт. + сыр (сулугуни или моцарелла или адыгейский)",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "336": {
+    "id": 336,
+    "name": "Овощи свежие 150–200 гр.",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "337": {
+    "id": 337,
+    "name": "Фрукты средние 2 шт. на выбор (яблоко/персик/груша)",
+    "calories": 130.0,
+    "protein": 9.0,
+    "fat": 5.8,
+    "carbs": 10.4,
+    "ingredients": [
+      {
+        "name": "сверху овощи",
+        "amount": 200.0,
+        "unit": "г",
+        "optional": false
+      },
+      {
+        "name": "на терке потереть сыр твердый",
+        "amount": 20.0,
+        "unit": "г",
+        "optional": false
+      }
+    ]
+  },
+  "338": {
+    "id": 338,
+    "name": "Спагетти (из полбы или тсп) 50 гр. в сухом виде или 120 гр.",
+    "calories": 75.0,
+    "protein": 2.5,
+    "fat": 0.2,
+    "carbs": 17.0,
+    "ingredients": [
+      {
+        "name": "в вареном под соусом болоньезе",
+        "amount": 100.0,
+        "unit": "г",
+        "optional": false
+      },
+      {
+        "name": "лук",
+        "amount": 100.0,
+        "unit": "г",
+        "optional": false
+      },
+      {
+        "name": "морковь по желанию",
+        "amount": 100.0,
+        "unit": "г",
+        "optional": false
+      },
+      {
+        "name": "томаты перетертые",
+        "amount": 200.0,
+        "unit": "г",
+        "optional": false
+      }
+    ]
+  },
+  "339": {
+    "id": 339,
+    "name": "Картофель (печеный или вареный) 80 гр.",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "340": {
+    "id": 340,
+    "name": "Йогурт нежирный или творог 4–5% 140 гр. + ягоды до 100 гр. +",
+    "calories": 97.5,
+    "protein": 2.2,
+    "fat": 9.0,
+    "carbs": 2.2,
+    "ingredients": [
+      {
+        "name": "орехи",
+        "amount": 15.0,
+        "unit": "г",
+        "optional": false
+      }
+    ]
+  },
+  "341": {
+    "id": 341,
+    "name": "Рис 45 гр. в сухом виде 130–150 гр. в готовом виде (можно",
+    "calories": 17.5,
+    "protein": 0.5,
+    "fat": 0.1,
+    "carbs": 4.0,
+    "ingredients": [
+      {
+        "name": "морковь до",
+        "amount": 50.0,
+        "unit": "г",
+        "optional": false
+      }
+    ]
+  },
+  "342": {
+    "id": 342,
+    "name": "Авокадо 55 гр. (½ от целого)",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "343": {
+    "id": 343,
+    "name": "Рыба на выбор (дорадо/палтус/хек/сибас) на выбор 140 гр.",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "344": {
+    "id": 344,
+    "name": "Греческий салат (овощи 150 гр.) + фетакса 20 гр. + масло 1 ч.л.",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "345": {
+    "id": 345,
+    "name": "Рыба на выбор (треска/дорада/хек) 140 гр. Рыбу запекаем",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "346": {
+    "id": 346,
+    "name": "Греча/полба/киноа (или другая крупа на выбор) 45 гр. в сухом",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "347": {
+    "id": 347,
+    "name": "Йогурт греческий 2% 130–140 гр.",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  },
+  "348": {
+    "id": 348,
+    "name": "Кабачок (цукини) запеченный с сыром 220–230 гр.",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "ingredients": []
+  }
+}

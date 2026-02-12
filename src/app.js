@@ -1,36 +1,23 @@
-// 🍽️ Meal Prep App - Real Recipes from PDF
+// 🍽️ Meal Prep App - Real Recipes from SQLite
 const { useState, useEffect, useMemo, useCallback } = React;
 
 // ============ KBJU СПРАВОЧНИК ============
 const UNIT_NORMALIZER = { "яйцо": 50, "банан": 120, "яблоко": 150, "груша": 150, "апельсин": 150, "лимон": 80 };
 
 const KBJU_REF = {
-    "яйцо": {"cal": 157, "prot": 12.7, "fat": 10.6, "carbs": 0.7},
-    "молоко": {"cal": 50, "prot": 3.2, "fat": 1.5, "carbs": 4.8},
-    "творог": {"cal": 101, "prot": 18, "fat": 3, "carbs": 3.5},
-    "творог 4-5%": {"cal": 101, "prot": 18, "fat": 4.5, "carbs": 3},
-    "сыр": {"cal": 350, "prot": 25, "fat": 27, "carbs": 2},
-    "моцарелла": {"cal": 280, "prot": 28, "fat": 17, "carbs": 3},
-    "фетакса": {"cal": 290, "prot": 21, "fat": 23, "carbs": 4},
-    "брынза": {"cal": 260, "prot": 22, "fat": 19, "carbs": 2},
-    "хлеб": {"cal": 250, "prot": 9, "fat": 3, "carbs": 45},
-    "цельнозерновой хлеб": {"cal": 220, "prot": 13, "fat": 3, "carbs": 37},
-    "геркулес": {"cal": 340, "prot": 13, "fat": 6, "carbs": 60},
-    "греча": {"cal": 310, "prot": 12, "fat": 3, "carbs": 57},
-    "рис": {"cal": 340, "prot": 8, "fat": 1, "carbs": 75},
-    "макароны": {"cal": 350, "prot": 13, "fat": 1, "carbs": 70},
-    "курица": {"cal": 165, "prot": 31, "fat": 3.6, "carbs": 0},
-    "куриная грудка": {"cal": 120, "prot": 22, "fat": 2, "carbs": 0},
-    "индейка": {"cal": 130, "prot": 29, "fat": 2, "carbs": 0},
-    "рыба": {"cal": 140, "prot": 20, "fat": 6, "carbs": 0},
-    "семга": {"cal": 208, "prot": 20, "fat": 13, "carbs": 0},
-    "овощи": {"cal": 30, "prot": 2, "fat": 0.2, "carbs": 5},
-    "масло": {"cal": 880, "prot": 0, "fat": 99, "carbs": 0},
-    "авокадо": {"cal": 160, "prot": 2, "fat": 15, "carbs": 9},
-    "яблоко": {"cal": 52, "prot": 0.3, "fat": 0.2, "carbs": 14},
-    "банан": {"cal": 89, "prot": 1, "fat": 0.3, "carbs": 23},
-    "сухофрукты": {"cal": 290, "prot": 3, "fat": 0.5, "carbs": 70},
-    "тофу": {"cal": 75, "prot": 8, "fat": 4.5, "carbs": 2},
+    "яйцо": {"cal": 157, "prot": 12.7, "fat": 10.6, "carbs": 0.7}, "молоко": {"cal": 50, "prot": 3.2, "fat": 1.5, "carbs": 4.8},
+    "творог": {"cal": 101, "prot": 18, "fat": 3, "carbs": 3.5}, "творог 4-5%": {"cal": 101, "prot": 18, "fat": 4.5, "carbs": 3},
+    "сыр": {"cal": 350, "prot": 25, "fat": 27, "carbs": 2}, "моцарелла": {"cal": 280, "prot": 28, "fat": 17, "carbs": 3},
+    "фетакса": {"cal": 290, "prot": 21, "fat": 23, "carbs": 4}, "брынза": {"cal": 260, "prot": 22, "fat": 19, "carbs": 2},
+    "хлеб": {"cal": 250, "prot": 9, "fat": 3, "carbs": 45}, "цельнозерновой хлеб": {"cal": 220, "prot": 13, "fat": 3, "carbs": 37},
+    "геркулес": {"cal": 340, "prot": 13, "fat": 6, "carbs": 60}, "греча": {"cal": 310, "prot": 12, "fat": 3, "carbs": 57},
+    "рис": {"cal": 340, "prot": 8, "fat": 1, "carbs": 75}, "макароны": {"cal": 350, "prot": 13, "fat": 1, "carbs": 70},
+    "курица": {"cal": 165, "prot": 31, "fat": 3.6, "carbs": 0}, "куриная грудка": {"cal": 120, "prot": 22, "fat": 2, "carbs": 0},
+    "индейка": {"cal": 130, "prot": 29, "fat": 2, "carbs": 0}, "рыба": {"cal": 140, "prot": 20, "fat": 6, "carbs": 0},
+    "семга": {"cal": 208, "prot": 20, "fat": 13, "carbs": 0}, "овощи": {"cal": 30, "prot": 2, "fat": 0.2, "carbs": 5},
+    "масло": {"cal": 880, "prot": 0, "fat": 99, "carbs": 0}, "авокадо": {"cal": 160, "prot": 2, "fat": 15, "carbs": 9},
+    "яблоко": {"cal": 52, "prot": 0.3, "fat": 0.2, "carbs": 14}, "банан": {"cal": 89, "prot": 1, "fat": 0.3, "carbs": 23},
+    "сухофрукты": {"cal": 290, "prot": 3, "fat": 0.5, "carbs": 70}, "тофу": {"cal": 75, "prot": 8, "fat": 4.5, "carbs": 2},
 };
 
 function normalizeWeight(name, amount, unit) {
@@ -64,35 +51,35 @@ function calcRecipeKBJU(ingredients, portions = 1) {
     return { cal: Math.round(total.cal * 10) / 10 };
 }
 
-// ============ РЕАЛЬНЫЕ РЕЦЕПТЫ из БАЗЫ ============
-const DEMO_RECIPES = {};
-function initRecipes() {
-    // Загружаем из localStorage (куда бот положит JSON с сервера)
-    // Пока используем demo-данные
-    const demoData = [
-        {id: 1, name: "Омлет из 1 яйца", portions_base: 1, ingredients: [{name: "Яйцо", amount: 1, unit: "шт"}, {name: "Молоко", amount: 50, unit: "мл"}], instructions: "Взбить, пожарить."},
-        {id: 2, name: "Цельнозерновой хлеб 50 г + сыр", portions_base: 1, ingredients: [{name: "Цельнозерновой хлеб", amount: 50, unit: "г"}, {name: "Сыр", amount: 35, unit: "г"}], instructions: "Съесть."},
-        {id: 3, name: "Крупа на выбор (греча/булгур/геркулес)", portions_base: 1, ingredients: [{name: "Греча", amount: 60, unit: "г"}], instructions: "Отварить."},
-        {id: 4, name: "Курица без кожи", portions_base: 1, ingredients: [{name: "Курица", amount: 100, unit: "г"}], instructions: "Запечь."},
-        {id: 5, name: "Салат овощной 200 г", portions_base: 1, ingredients: [{name: "Овощи", amount: 200, unit: "г"}], instructions: "Нарезать, заправить."},
-    ];
-    demoData.forEach(r => DEMO_RECIPES[String(r.id)] = r);
-}
-initRecipes();
+// ============ ЗАГРУЗКА РЕЦЕПТОВ ============
+let DEMO_RECIPES = {};
 
-// ============ МЕНЮ из 348 реальных рецептов ============
+async function loadRecipes() {
+    try {
+        const response = await fetch('data/recipes.json');
+        if (response.ok) {
+            DEMO_RECIPES = await response.json();
+            console.log('✅ Загружено рецептов:', Object.keys(DEMO_RECIPES).length);
+        }
+    } catch (e) {
+        console.log('📋 Используем встроенные рецепты');
+    }
+}
+
+// ============ МЕНЮ ============
 const DEMO_MENU = {};
 function generateMenu() {
     const mealTypes = ['breakfast', 'snack', 'lunch', 'dinner'];
-    const mealNames = {'breakfast': '🥣', 'snack': '🍿', 'lunch': '🥗', 'dinner': '🍽️'};
-    const mealRus = {'breakfast': 'завтрак', 'snack': 'перекус', 'lunch': 'обед', 'dinner': 'ужин'};
+    const mealEmoji = {'breakfast': '🥣', 'snack': '🍿', 'lunch': '🥗', 'dinner': '🍽️'};
     
-    // Эти данные бот возьмёт из SQLite
-    // Пока генерируем из 348 рецептов
+    // Проверяем есть ли загруженные рецепты
+    const recipeCount = Object.keys(DEMO_RECIPES).length;
+    const totalRecipes = recipeCount > 0 ? recipeCount : 348;
+    
     let recipeId = 1;
     const startDate = new Date(2026, 1, 1); // 1 февраля
     
-    for (let d = 0; d < 87; d++) {
+    for (let d = 0; d < 90; d++) {
         const date = new Date(startDate);
         date.setDate(startDate.getDate() + d);
         const dateStr = date.toISOString().split('T')[0];
@@ -100,31 +87,26 @@ function generateMenu() {
         DEMO_MENU[dateStr] = {};
         for (const mt of mealTypes) {
             DEMO_MENU[dateStr][mt] = [];
-            if (recipeId <= 348) {
-                const recipe = DEMO_RECIPES[String(recipeId)] || {name: `Рецепт #${recipeId}`, ingredients: []};
+            if (recipeId <= totalRecipes) {
+                const recipe = DEMO_RECIPES[String(recipeId)] || {name: `Рецепт #${recipeId}`, ingredients: [], calories: 0};
+                const kbju = recipe.calories > 0 ? {cal: recipe.calories} : calcRecipeKBJU(recipe.ingredients || []);
+                
                 DEMO_MENU[dateStr][mt].push({
                     id: parseInt(dateStr.replace(/-/g, '')) * 10 + mealTypes.indexOf(mt),
                     recipe_id: String(recipeId),
                     portions_multiplier: 1,
-                    text: recipe.name || `Рецепт ${recipeId}`,
-                    kbju: calcRecipeKBJU(recipe.ingredients || [])
+                    text: recipe.name,
+                    kbju: kbju
                 });
                 recipeId++;
             }
         }
     }
 }
-generateMenu();
 
 // ============ КАЛЕНДАРЬ ============
 const Calendar = ({ currentDate, meals, onDayClick }) => {
     const weekDays = ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'];
-    const mealTypes = [
-        { key: 'breakfast', name: '🥣', rus: 'завтрак' },
-        { key: 'snack', name: '🍿', rus: 'перекус' },
-        { key: 'lunch', name: '🥗', rus: 'обед' },
-        { key: 'dinner', name: '🍽️', rus: 'ужин' }
-    ];
     
     const calendarData = useMemo(() => {
         const year = currentDate.getFullYear();
@@ -188,10 +170,10 @@ const Calendar = ({ currentDate, meals, onDayClick }) => {
 // ============ ДЕНЬ ============
 const DayDrawer = ({ date, meals, onClose, onMealClick, onRefresh }) => {
     const mealTypes = [
-        { key: 'breakfast', name: '🥣', label: 'Завтрак', color: 'amber' },
-        { key: 'snack', name: '🍿', label: 'Перекус', color: 'purple' },
-        { key: 'lunch', name: '🥗', label: 'Обед', color: 'green' },
-        { key: 'dinner', name: '🍽️', label: 'Ужин', color: 'blue' }
+        { key: 'breakfast', name: '🥣', label: 'Завтрак' },
+        { key: 'snack', name: '🍿', label: 'Перекус' },
+        { key: 'lunch', name: '🥗', label: 'Обед' },
+        { key: 'dinner', name: '🍽️', label: 'Ужин' }
     ];
     
     const dateObj = new Date(date + 'T00:00:00');
@@ -240,7 +222,7 @@ const DayDrawer = ({ date, meals, onClose, onMealClick, onRefresh }) => {
 // ============ РЕЦЕПТ ============
 const RecipeModal = ({ recipe, portions, onClose }) => {
     if (!recipe) return null;
-    const kbju = calcRecipeKBJU(recipe.ingredients || [], portions);
+    const kbju = recipe.calories > 0 ? {cal: recipe.calories} : calcRecipeKBJU(recipe.ingredients || [], portions);
     
     return (
         <div class="fixed inset-0 z-50 flex items-end justify-center">
@@ -272,7 +254,6 @@ const RecipeModal = ({ recipe, portions, onClose }) => {
                             </div>
                         </>
                     )}
-                    {recipe.instructions && <><h3 class="text-sm font-medium mt-6 mb-3">Инструкция</h3><div class="text-sm text-muted whitespace-pre-line bg-primary/20 p-4 rounded-xl">{recipe.instructions}</div></>}
                 </div>
                 <div class="px-6 py-4 border-t border-gray-100">
                     <button onClick={onClose} class="w-full py-3 bg-primary rounded-xl">Закрыть</button>
@@ -284,26 +265,31 @@ const RecipeModal = ({ recipe, portions, onClose }) => {
 
 // ============ ГЛАВНОЕ ПРИЛОЖЕНИЕ ============
 const App = () => {
+    const [loaded, setLoaded] = useState(false);
     const [currentDate, setCurrentDate] = useState(new Date());
     const [selectedDate, setSelectedDate] = useState(null);
     const [meals, setMeals] = useState({});
     const [selectedMeal, setSelectedMeal] = useState(null);
     
     useEffect(() => {
-        const saved = localStorage.getItem('meal_plan');
-        if (saved) {
-            try { setMeals(JSON.parse(saved)); } 
-            catch { setMeals(DEMO_MENU); }
-        } else {
-            setMeals(DEMO_MENU);
-        }
+        // Загружаем рецепты
+        loadRecipes().then(() => {
+            generateMenu();
+            // Загружаем меню из localStorage
+            const saved = localStorage.getItem('meal_plan');
+            if (saved) {
+                try { setMeals(JSON.parse(saved)); } 
+                else { setMeals(DEMO_MENU); }
+            } else { setMeals(DEMO_MENU); }
+            setLoaded(true);
+        });
     }, []);
     
     useEffect(() => {
-        if (Object.keys(meals).length > 0) {
+        if (loaded && Object.keys(meals).length > 0) {
             localStorage.setItem('meal_plan', JSON.stringify(meals));
         }
-    }, [meals]);
+    }, [meals, loaded]);
     
     const changeMonth = (delta) => {
         const d = new Date(currentDate);
@@ -312,13 +298,15 @@ const App = () => {
     };
     
     const handleRefresh = () => {
-        localStorage.removeItem('meal_plan');
-        setMeals(DEMO_MENU);
-        alert('✅ Данные обновлены из базы!');
+        loadRecipes().then(() => {
+            generateMenu();
+            setMeals(DEMO_MENU);
+            alert('✅ Данные обновлены!');
+        });
     };
     
     const handleMealClick = (meal) => {
-        const recipe = DEMO_RECIPES[meal.recipe_id] || DEMO_RECIPES[String(meal.recipe_id)] || {name: meal.text, ingredients: []};
+        const recipe = DEMO_RECIPES[meal.recipe_id] || DEMO_RECIPES[String(meal.recipe_id)] || {name: meal.text, ingredients: [], calories: 0};
         setSelectedMeal({ ...meal, recipe });
     };
     
@@ -328,12 +316,12 @@ const App = () => {
             
             <div class="fixed bottom-6 left-6 right-6 flex justify-between">
                 <button onClick={() => changeMonth(-1)} class="w-12 h-12 bg-surface shadow-lg rounded-full flex items-center justify-center">←</button>
-                <button onClick={() => changeMonth(1)} class="w-12 h-12 bg-surface shadow-lg rounded-full flex items-center justify-center">→</button>
+                <button onClick={() => changeMonth(1)} class="w-12 h-12 bg-surface flex items-center justify shadow-lg rounded-full-center">→</button>
             </div>
             
             <div class="fixed bottom-24 left-6 right-6 flex justify-between px-4">
                 <button onClick={handleRefresh} class="p-3 bg-surface shadow rounded-full">📥 Обновить</button>
-                <button class="p-3 bg-surface shadow rounded-full" onClick={() => alert('🛒 Список покупок')}>🛒</button>
+                <button class="p-3 bg-surface shadow rounded-full" onClick={() => alert('🛒')}>🛒</button>
             </div>
             
             {selectedDate && (
